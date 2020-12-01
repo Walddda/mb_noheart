@@ -1,7 +1,5 @@
 body{
-    padding-top: 1px;
-    margin-top: -1px;
-    background-color: #f7f7f7;
+    background-color: #F7F7F7;
 }
 nav{
     height: 10%;
@@ -35,16 +33,24 @@ a:hover{
 }
 /* ----- Links für Nav Bar zu anderen Pages ----- */
 
-.logo > img{
-    width:100%;
-}
-.logo{
+
+.aboutUs{
     padding-left: 1%;
     height: 8vh;
     margin-top: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 50px;
+}
+.logo > img{
+    width:80%;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
 }
 
 .border{
@@ -86,47 +92,53 @@ header{
     height:12.4%
 }
 .mainP{
+    font-family: brevia, sans-serif;
+    font-weight: 600;
+    font-style: normal;
     width: 100%;
-    height: 185vh;
-    margin-top: 12.4vh;
-    /*background-image:url('pictures/BG.png') ;
-    background-repeat: repeat;
-    background-size: 100%;
-    background-attachment: fixed;*/
+    padding-top: 12.4vh;
+    font-size: 30px;
 }
 
-/* Description for Landing Page*/
-#desc{
-    width:500px;
-    text-align:center;
-    color:#16019A;
-    font-weight:700;
-    font-size:23px;
-    font-family: brevia,sans-serif;
-    margin-top:143vh;
-    z-index:-1;
-}
-
-#heading {
-    font-family: flood-std, sans-serif;
-    color:#16019A;
-    position: fixed;
-    margin-top:35vh;
-    font-size:80px;
-    width:500px;
-    text-align: center;
-}
-.shirtPicture{
-    position: fixed;
-    width: 500px;
-}
-.mainLeftShirt{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    padding-right: 30px;
-}
 .container{
     max-width: 100%;
+}
+.contact{
+    font-size: 20px;
+    padding-left: 5%;
+    margin-top: 5vh;
+}
+.txt{
+    padding-left: 5%;
+    margin-top: 5vh;
+}
+.tel{
+    width: 30px;
+	height: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-image: url("pictures/phone-call.png");
+}
+.mail{
+    width: 30px;
+	height: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-image: url("pictures/email.png");
+}
+.insta{
+    width: 30px;
+	height: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-image: url("pictures/instagram.png");
+}
+.infoLine{
+    width: 700px;
+    border: none;
+    height: 4px;
+    background-color: black; /* Modern Browsers */
 }
