@@ -1,0 +1,50 @@
+body{
+    padding-top: 1px;
+    margin-top: -1px;
+    background-color: #f7f7f7;
+}
+.mainP{
+    width: 100%;
+    height: 185vh;
+    margin-top: 12.4vh;
+    /*background-image:url('pictures/BG.png') ;
+    background-repeat: repeat;
+    background-size: 100%;
+    background-attachment: fixed;*/
+}
+
+/* Description for Landing Page*/
+#desc{
+    width:500px;
+    text-align:center;
+    color:#16019A;
+    font-weight:700;
+    font-size:23px;
+    font-family: brevia,sans-serif;
+    margin-top:101vh;
+    z-index:-1;
+}
+
+#heading {
+    font-family: flood-std, sans-serif;
+    color:#16019A;
+    position: fixed;
+    margin-top:35vh;
+    font-size:80px;
+    width:500px;
+    text-align: center;
+}
+.shirtPicture{
+    position: fixed;
+    width: 500px;
+}
+.mainLeftShirt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding-right: 30px;
+}
+.container{
+    max-width: 100%;
+}

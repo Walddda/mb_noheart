@@ -1,0 +1,44 @@
+body{
+    padding-top: 1px;
+    margin-top: -1px;
+    background-color: #f7f7f7;
+}
+.mainP{
+    width: 100%;
+    height: 87vh;
+    margin-top: 12.4vh;
+    padding-top: 10vh;
+    /*background-image:url('pictures/BG.png') ;
+    background-repeat: repeat;
+    background-size: 100%;
+    background-attachment: fixed;*/
+}
+.container{
+    max-width: 100%;
+}
+.topBoxnarrows{
+    display: flex;
+    flex-direction: row;
+}
+.productImage{
+    width: 30%;
+}
+.product{
+    display: flex;
+    flex-direction: row;
+}
+.productBox{
+    border: 1px black solid;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+}
+.arrow{
+    display: flex;
+    font-size: 50px;
+    align-items: center;
+    padding:20px;
+}
+.arrowP{
+    cursor: pointer;
+}
