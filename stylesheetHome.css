@@ -1,27 +1,22 @@
 body{
     padding-top: 1px;
     margin-top: -1px;
-    background-color: #f7f7f7;
-}
-.mainP{
-    width: 100%;
-    height: 185vh;
-    margin-top: 12.4vh;
-    /*background-image:url('pictures/BG.png') ;
-    background-repeat: repeat;
-    background-size: 100%;
-    background-attachment: fixed;*/
+    overflow: hidden;
 }
 
-/* Description for Landing Page*/
+ 
+.mainP{
+    margin-top: 12.4vh;
+}
+
 #desc{
-    width:500px;
+    width:62%;
     text-align:center;
     color:#16019A;
     font-weight:700;
-    font-size:23px;
+    font-size:27px;
     font-family: brevia,sans-serif;
-    margin-top:101vh;
+    margin-top:44vh;
     z-index:-1;
 }
 
@@ -31,20 +26,149 @@ body{
     position: fixed;
     margin-top:35vh;
     font-size:80px;
-    width:500px;
+    width:30%;
     text-align: center;
 }
+
 .shirtPicture{
     position: fixed;
     width: 500px;
 }
+
 .mainLeftShirt{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 87.6vh;
     padding-right: 30px;
 }
+
 .container{
     max-width: 100%;
 }
+
+/* ANIMATIONEN */
+
+
+#desc {
+   opacity: 0;
+}
+
+#indicator {
+    margin-top: 81vh;
+    margin-left: 28%;
+
+    animation: jump 0.75s ease-out 0s infinite;
+    -moz-animation: jump 0.75s ease-out 0s infinite;
+    -webkit-animation: jump 0.75s ease-out 0s infinite;
+    -o-animation: jump 0.75s ease-out 0s infinite;
+  }
+
+  #indicator:hover {
+      cursor: pointer;
+  }
+
+  @keyframes jump {
+    0%{
+      transform: translateY(0em);
+    }
+    55%{
+      transform: translateY(-0.5em);
+    }
+    100%{
+      transform: translateY(0em);
+    }
+  }
+  @-moz-keyframes jump {
+    0%{
+      transform: translateY(0em);
+    }
+    55%{
+      transform: translateY(-0.5em);
+    }
+    100%{
+      transform: translateY(0em);
+    }
+  }
+  @-webkit-keyframes jump {
+    0%{
+      transform: translateY(0em);
+    }
+    55%{
+      transform: translateY(-0.5em);
+    }
+    100%{
+      transform: translateY(0em);
+    }
+  }
+  @-o-keyframes jump {
+    0%{
+      transform: translateY(0em);
+    }
+    55%{
+      transform: translateY(-0.5em);
+    }
+    100%{
+      transform: translateY(0em);
+    }
+  }
+
+
+  .anim {
+    animation: turnUp 0.75s ease-out 0.25s 1 both;
+    -moz-animation: turnUp 0.75s ease-out 0.25s 1 both;
+    -webkit-animation: turnUp 0.75s ease-out 0.25s 1 both;
+    -o-animation: turnUp 0.75s ease-out 0.25s 1 both;
+  }
+  @keyframes turnUp {
+    0%{
+      transform: translateY(5em);
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-0em);
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes turnUp {
+    0%{
+      transform: translateY(5em);
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-0em);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes turnUp {
+    0%{
+      transform: translateY(5em);
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-0em);
+      opacity: 1;
+    }
+  }
+  @-o-keyframes turnUp {
+    0%{
+      transform: translateY(5em);
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-0em);
+      opacity: 1;
+    }
+  }

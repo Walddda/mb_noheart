@@ -1,38 +1,4 @@
-body{
-    background-color: #F7F7F7;
-}
-nav{
-    height: 10%;
-    font-family: brevia,sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 33px;
-    color:rgb(33, 37, 41);
-}
-.navBar{
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    margin-right: 15%;
-    margin-top: 5%;
-}
-
 /* ----- Links für Nav Bar zu anderen Pages ----- */
-a{
-    font-family: brevia,sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 28px;
-    text-decoration:none;
-    color:rgb(33, 37, 41);
-}
-
-a:hover{
-    text-decoration: none;
-    color:blue;
-}
-/* ----- Links für Nav Bar zu anderen Pages ----- */
-
 
 .aboutUs{
     padding-left: 1%;
@@ -43,102 +9,209 @@ a:hover{
     align-items: center;
     font-size: 50px;
 }
-.logo > img{
-    width:80%;
+
+.logoMain > svg{
+    height:270%;
 }
-.logo{
+.logoMain{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
 }
 
-.border{
-    width: 2px;
-    height:35px;
-    margin-top:1%;
-    background-color: rgba(0, 0, 0, 0.267);
-    font-size: 0%;
-}
-
-header{
-    width: 100%;
-    position: fixed;
-    max-width: 100%;
-    height: 20%;
-    z-index:1;
-}
-.black-stripe{
-    background-color: black;
-    height:5px;
-    margin-top: 12.2vh;
-}
-.logoLine{
-    position: fixed;
-    width: 100%;
-}
-.navBarLine{
-    width: 100%;
-    z-index: -1;
-    position: fixed;
-    background-color: #f7f7f7;
-    /*padding-bottom: 1%;*/
-    height:12.4%
-}
-.navBarLine2{
-    width: 100%;
-    position: fixed;
-    /*padding-bottom: 1%;*/
-    height:12.4%
-}
-.mainP{
-    font-family: brevia, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    width: 100%;
-    padding-top: 12.4vh;
-    font-size: 30px;
-}
 
 .container{
     max-width: 100%;
 }
+
 .contact{
     font-size: 20px;
-    padding-left: 5%;
-    margin-top: 5vh;
+    width:100%;
+    /*display: flex;
+    justify-content: center;
+    flex-direction: column;*/
+    display:inline-block;
+
 }
-.txt{
-    padding-left: 5%;
-    margin-top: 5vh;
-}
-.tel{
+#tel, #mail, #insta{
     width: 30px;
 	height: 30px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	display: inline-block;
+    display: inline-block;
+}
+
+#tel{
 	background-image: url("pictures/phone-call.png");
 }
-.mail{
-    width: 30px;
-	height: 30px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: inline-block;
+
+#mail{
 	background-image: url("pictures/email.png");
 }
-.insta{
-    width: 30px;
-	height: 30px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: inline-block;
+#insta{
 	background-image: url("pictures/instagram.png");
 }
+
+.specialA{
+    text-align: center;
+    font-family: brevia,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 28px;
+    text-decoration:none;
+    color:rgb(33, 37, 41);
+    display:inline-block;
+    padding: 0;
+}
+
+.specialA:hover{
+    text-decoration: none;
+    color:#16019A;
+}
+.specialA:hover #insta{
+	background-image: url("pictures/instagram_blue_hex.png");
+}
+.specialA:hover #tel{
+	background-image: url("pictures/phone-call_blue_hex.png");
+}
+.specialA:hover #mail{
+	background-image: url("pictures/email_blue_hex.png");
+}
+
+
 .infoLine{
-    width: 700px;
+    width: 90%;
     border: none;
+    margin-left:10%;
+    margin-bottom: 0;
     height: 4px;
-    background-color: black; /* Modern Browsers */
+    background-color: black;
+}
+
+#pic{
+  margin-top:10vh; 
+}
+.topPart{
+    height: 70%;
+}
+i{
+    vertical-align: middle;
+}
+
+.contacts{
+    margin-left: 1vh;
+    font-size: 26px;
+    font-weight: 500;
+    height:32px;
+    vertical-align: middle;
+}
+
+.cont{
+    margin-top: 8vh;
+}
+
+.titleM{
+    display:none;
+    color: #16019A;
+    font-size: 36px;
+}
+
+.noheart{
+    color:#16019A;
+    font-style:italic;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 800px) {
+    #pic{
+        display:none;
+    }
+    .mainP{
+        font-family: brevia, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        width: auto;
+        font-size: 30px;
+        padding-top: 12.4%;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .txt{
+        margin-top: 12vh;
+        margin-bottom: 5vh;
+        width:100%;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .infoLine{
+        display: none;
+    }
+    .titleM{
+        display:block;
+    }
+    .contacts{
+        display: none;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 800px) {
+    .mainP{
+        font-family: brevia, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        width: 190vh;
+        font-size: 30px;
+        padding-top: 12.4vh;
+    }
+    .txt{
+        padding-left: 10%;
+        margin-top: 17vh;
+        margin-bottom: 5vh;
+        width:100%;
+        font-size: 24px;
+        font-weight: 500;
+    
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mainP{
+        font-family: brevia, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        width: max-content;
+        padding-top: 12.4vh;
+        font-size: 30px;
+    }
+    .txt{
+        padding-left: 10%;
+        margin-top: 17vh;
+        margin-bottom: 5vh;
+        width:100%;
+        font-size: 26px;
+        font-weight: 500;
+    
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mainP{
+        font-family: brevia, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        width: max-content;
+        padding-top: 22.4vh;
+        font-size: 30px;
+    }
+    .txt{
+        padding-left: 10%;
+        margin-top: 17vh;
+        margin-bottom: 5vh;
+        width:100%;
+        font-size: 29px;
+        font-weight: 500;
+    
+    }
 }

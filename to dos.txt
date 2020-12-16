@@ -1,0 +1,26 @@
+
+Schatten:
+	Product Page
+	Product Detailed bei Detailansicht
+Images Preloaden
+nav bar:
+	links (Home/Products/Info) zu weit oben
+	logo größe checken
+Grafiken updaten (Dystopien Shirt)
+Credits für dystopian
+Landing Page:
+	Dystopian design (back, bei hovern front)
+Product detailed:
+	für dystopian shirt und hoodie copy pasten (buttons + funktionen etc)
+	buttons anpassen (padding, design)
+	closeup evtl größe ändern
+Info Page:
+	contact details ändern
+	icons von svgbox
+
+Responsive:
+	bootstrap anpassungen
+	nav bar (js)
+
+Bonus:
+	Landing Page designs per animation switchen

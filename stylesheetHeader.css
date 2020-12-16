@@ -1,8 +1,27 @@
 body{
     padding-top: 1px;
     margin-top: -1px;
+    /*background-color: grey;*/
+    /* overflow: hidden; */
+    /*-ms-overflow-style: none;  /* IE and Edge */
+    /*scrollbar-width: none;  /* Firefox */
     background-color: #f7f7f7;
+    
 }
+.mainP{
+    /* overflow: auto; */
+}
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ /*::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  /*html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    /*scrollbar-width: none;  /* Firefox */
+  /*}*/
+
 nav{
     height: 10%;
     font-family: brevia,sans-serif;
@@ -11,33 +30,16 @@ nav{
     font-size: 33px;
     color:rgb(33, 37, 41);
 }
-.navBar{
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    margin-right: 15%;
-    margin-top: 5%;
-}
-
-/* ----- Links für Nav Bar zu anderen Pages ----- */
-a{
-    font-family: brevia,sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 28px;
-    text-decoration:none;
-    color:rgb(33, 37, 41);
-}
 
 a:hover{
     text-decoration: none;
-    color:blue;
+    color:#16019A;
 }
-/* ----- Links für Nav Bar zu anderen Pages ----- */
 
 .logo > img{
-    width:100%;
+    height:350%;
 }
+
 .logo{
     padding-left: 1%;
     height: 8vh;
@@ -46,42 +48,175 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-
-.border{
-    width: 2px;
-    height:35px;
-    margin-top:1%;
-    background-color: rgba(0, 0, 0, 0.267);
-    font-size: 0%;
+.aboutUs > svg{
+    height:200%;
 }
 
-header{
+.aboutUs{
+    padding-left: 1%;
+    height: 8vh;
+    margin-top: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.headerDesktop{
     width: 100%;
     position: fixed;
     max-width: 100%;
     height: 20%;
     z-index:1;
 }
+
 .black-stripe{
     background-color: black;
     height:5px;
     margin-top: 12.2vh;
 }
+
 .logoLine{
     position: fixed;
     width: 100%;
 }
-.navBarLine{
-    width: 100%;
-    z-index: -1;
+
+.headerBackground{
     position: fixed;
     background-color: #f7f7f7;
-    /*padding-bottom: 1%;*/
-    height:12.4%
+    height: 12.4%;
+    width: 100%;
 }
+
 .navBarLine2{
     width: 100%;
     position: fixed;
     /*padding-bottom: 1%;*/
-    height:12.4%
+    height:12.4vh;
+    z-index: 1;
+}
+
+/* ------------------------------ */ 
+.headerMobile{
+    display: none;
+    position: fixed;
+    background-color: #f7f7f7;
+    z-index: 1;
+}
+
+.logoM{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+.burgerM{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.logoMImg{
+    height: 200%;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.burgerMenuM {
+    width: 55%;
+    height: 2px;
+    background-color: #B5B5B5;
+    margin: 6px 0;
+}
+
+.headerRowM{
+    padding-bottom: 15px;
+    border-bottom: black 3px solid ;
+    background-color: #f7f7f7;
+}
+
+@media only screen and (max-width: 800px) {
+    .headerDesktop {
+        display: none;
+    }
+    .headerMobile{
+        display: block;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 800px) {
+    a{
+        font-family: brevia,sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 18px;
+        text-decoration:none;
+        color:rgb(33, 37, 41);
+    }
+    .border{
+        width: 2px;
+        height:25px;
+        margin-top:1%;
+        background-color: rgba(0, 0, 0, 0.267);
+        font-size: 0%;
+    }
+    .navBar{
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        margin-right: 15%;
+        margin-top: 5vh;
+    }
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    a{
+        font-family: brevia,sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+        text-decoration:none;
+        color:rgb(33, 37, 41);
+    }
+    .border{
+        width: 2px;
+        height:25px;
+        margin-top:1%;
+        background-color: rgba(0, 0, 0, 0.267);
+        font-size: 0%;
+    }
+    .navBar{
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        margin-right: 15%;
+        margin-top: 5vh;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    a{
+        font-family: brevia,sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 28px;
+        text-decoration:none;
+        color:rgb(33, 37, 41);
+    }
+    .border{
+        width: 2px;
+        height:35px;
+        margin-top:1%;
+        background-color: rgba(0, 0, 0, 0.267);
+        font-size: 0%;
+    }
+    .navBar{
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        margin-right: 15%;
+        margin-top: 3.8vh;
+    }
 }

@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="stylesheetHome.css">
     <link rel="stylesheet" href="https://use.typekit.net/bbg6boj.css">
     <link rel="stylesheet" href="https://use.typekit.net/owz8zel.css">
-    <link rel="shortcut icon" href="pictures/logo_blau_2.png" />
-    <title>No Heart</title>
+    <link rel="shortcut icon" href="pictures/logo_FINAL.svg"/>
+    <title>no heart</title>
 </head>
 <body>
-    <header class="container ">
+    <header class="container headerDesktop">
+        <div class="row headerBackground"></div>
         <div class="row logoLine">
             <div class="col-2 black-stripe"></div>
-            <div class="logo col-2 col-lg-2 col-md-3"><img src="pictures/logo_blau_2.png"></div>
-            <div class="col-9 col-lg-8 col-md-8 black-stripe"></div>
+            <div class="logo col-2 col-lg-2 col-md-3">
+                <img src="pictures/logo_FINAL.svg">
+            </div>
+            <div class="col-9 col-lg-8 col-md-7 black-stripe"></div>
         </div>
+        
         <div class="row navBarLine2">
             <div class="col-7">
             </div>
@@ -32,24 +36,42 @@
             </nav>
         </div>
     </header>
+    <header class="container headerMobile">
+        <div class="row headerRowM">
+            <div class="col-3 logoM"><img src="pictures/logo_FINAL.svg" class="logoMImg"></div>
+            <div class="col-6 spaceM"></div>
+            <div class="col-3 burgerM">
+                <svg stroke="#B5B5B5" width="55" height="55" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" fill="none"><path xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+            </div>
+        </div>
+    </header>
     
     <div>
-    <div class="mainP">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 mainLeftShirt">
-                    <img src="pictures/signature_shirt_black_forTesting.png" alt="Dystopian Shirt" class="shirtPicture">
-                </div>
-                <div class="col-6 mainRightText">
-                    <h1 id="heading">No Heart</h1>
-                    <div id="desc"> 
-                        We are a clothing brand based in Austria. 
-                        “No Heart” reflects on the heartless manner of society. 
+        <div class="mainP">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 mainLeftShirt">
+                        <img src="pictures/shirt_front_black_signature.svg" alt="Signature Shirt" class="shirtPicture">
+                    </div>
+                    <div class="col-6">
+                        <h1 id="heading">No Heart</h1>
+                        <div>
+                            <svg id="indicator" onclick="hide()" stroke="#16019a" width="35" height="35" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" fill="none"><path xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7"></path></svg>
+                            <div id="desc">
+                             We are a clothing brand based in Austria. 
+                             “no heart” reflects on the heartless manner of society. 
+                            </div> 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+<script>
+    function hide() {
+	    document.getElementById("desc").classList.add("anim");
+        document.getElementById("indicator").style.display = "none";
+    }
+</script>
 </body>
 </html>

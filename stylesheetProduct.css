@@ -1,8 +1,10 @@
 body{
-    background-color: #F7F7F7;
+    overflow: hidden;
 }
 .content {
-    padding-top: 25vh;
+    padding-top: 31vh;
+    width:90%;
+    max-width:90%;
 }
 
 button{
@@ -13,9 +15,150 @@ button{
     text-decoration:none;
     color:rgb(33, 37, 41);
     border: none;
+    /* background-color: white; */
+    background-color: #f7f7f7;
+    padding: 30px;
 }
 
 button:hover{
     text-decoration: none;
-    color:blue;
+    color:#16019A;
+}
+
+
+.shirtPic{
+    width:400px;
+    padding-bottom: 1.5vh;
+}
+
+.pics{
+    margin-top: 16vh;
+}
+.content{
+    /*width: 80%;
+*/}
+
+/* Farbe von der Section wo man sich gerade befindet */
+.rn{
+    text-decoration:underline solid #16019A;
+}
+
+.rn:hover{
+    text-decoration:underline solid #16019A;
+}
+.hoodiePic{
+    width: 100%;
+}
+
+/* ANIMATIONEN */
+
+.product1 {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 1s ease-out 0.1s 1 normal backwards;
+    -moz-animation:  fadein 1s ease-out 0.1s 1 normal backwards; /* Firefox */
+    -webkit-animation:  fadein 1s ease-out 0.1s 1 normal backwards; /* Safari and Chrome */
+    -o-animation:  fadein 1s ease-out 0.1s 1 normal backwards; /* Opera */
+    
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+}
+.product1:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);  
+    -ms-transform: scale(1.05);  
+    -o-transform: scale(1.05);  
+}
+
+
+.product2 {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 1s ease-out 0.5s 1 normal backwards;
+    -moz-animation: fadein 1s ease-out 0.5s 1 normal backwards; /* Firefox */
+    -webkit-animation: fadein 1s ease-out 0.5s 1 normal backwards; /* Safari and Chrome */
+    -o-animation: fadein 1s ease-out 0.5s 1 normal backwards; /* Opera */
+    
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+}
+
+.product2:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);  
+    -ms-transform: scale(1.05);  
+    -o-transform: scale(1.05);  
+}
+
+.product3 {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 1s ease-out 1s 1 normal backwards;
+    -moz-animation: fadein 1s ease-out 1s 1 normal backwards; /* Firefox */
+    -webkit-animation: fadein 1s ease-out 1s 1 normal backwards; /* Safari and Chrome */
+    -o-animation: fadein 1s ease-out 1s 1 normal backwards; /* Opera */
+    
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+}
+
+.product3:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);  
+    -ms-transform: scale(1.05);  
+    -o-transform: scale(1.05);  
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+        transform: translateY(2.5em);
+        
+    }
+    to {
+        opacity:1;
+        transform: translateY(0em);
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+        transform: translateY(2.5em);
+        
+    }
+    to {
+        opacity:1;
+        transform: translateY(0em);
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+        transform: translateY(2.5em);
+        
+    }
+    to {
+        opacity:1;
+        transform: translateY(0em);
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+        transform: translateY(2.5em);
+        
+    }
+    to {
+        opacity:1;
+        transform: translateY(0em);
+    }
 }
