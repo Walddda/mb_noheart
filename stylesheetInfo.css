@@ -10,11 +10,11 @@
     font-size: 50px;
 }
 
-.logoMain > svg{
-    height:270%;
+.logoMain > object{
+    width:105%;
 }
+
 .logoMain{
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
@@ -23,16 +23,13 @@
 
 .container{
     max-width: 100%;
+    padding-left: 0;
 }
 
 .contact{
     font-size: 20px;
+    margin-left:1.5vh;
     width:100%;
-    /*display: flex;
-    justify-content: center;
-    flex-direction: column;*/
-    display:inline-block;
-
 }
 #tel, #mail, #insta{
     width: 30px;
@@ -43,42 +40,34 @@
 }
 
 #tel{
-	background-image: url("pictures/phone-call.png");
+	background-image: url("pictures/contactDetails/mobile/phone-call.png");
 }
 
 #mail{
-	background-image: url("pictures/email.png");
+	background-image: url("pictures/contactDetails/email/email.png");
 }
 #insta{
-	background-image: url("pictures/instagram.png");
+	background-image: url("pictures/contactDetails/instagram/instagram.png");
 }
 
 .specialA{
-    text-align: center;
     font-family: brevia,sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 28px;
     text-decoration:none;
-    color:rgb(33, 37, 41);
-    display:inline-block;
+    color: rgb(33, 37, 41);
     padding: 0;
+}
+
+.socials {
+    padding-left: 5%;
 }
 
 .specialA:hover{
     text-decoration: none;
     color:#16019A;
 }
-.specialA:hover #insta{
-	background-image: url("pictures/instagram_blue_hex.png");
-}
-.specialA:hover #tel{
-	background-image: url("pictures/phone-call_blue_hex.png");
-}
-.specialA:hover #mail{
-	background-image: url("pictures/email_blue_hex.png");
-}
-
 
 .infoLine{
     width: 90%;
@@ -90,11 +79,14 @@
 }
 
 #pic{
-  margin-top:10vh; 
+  margin-top:7vh;
 }
+
 .topPart{
-    height: 70%;
+    height: 50vh;
+    margin: 0;
 }
+
 i{
     vertical-align: middle;
 }
@@ -104,11 +96,12 @@ i{
     font-size: 26px;
     font-weight: 500;
     height:32px;
-    vertical-align: middle;
+    vertical-align:bottom;
 }
 
+
 .cont{
-    margin-top: 8vh;
+    margin-top: 4vh;
 }
 
 .titleM{
@@ -119,8 +112,17 @@ i{
 
 .noheart{
     color:#16019A;
-    font-style:italic;
-    font-weight: 500;
+    font-family:all-round-gothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.row {
+    margin: 0;
+}
+
+.text {
+    height: 80%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -133,26 +135,51 @@ i{
         font-style: normal;
         width: auto;
         font-size: 30px;
-        padding-top: 12.4%;
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-top: 15vh;
+        padding-left: 15%;
+        padding-right: 15%;
     }
     .txt{
-        margin-top: 12vh;
-        margin-bottom: 5vh;
+        margin-top: 4vh;
+        margin-bottom: 2vh;
         width:100%;
         font-size: 20px;
         font-weight: 500;
         text-align: center;
+
     }
     .infoLine{
         display: none;
     }
     .titleM{
         display:block;
+        color:#16019A;
+        font-family:all-round-gothic, sans-serif;
+        font-weight: 700;
+        font-style: normal;
     }
+    
+    .socials{
+        text-align: center;
+        padding-left: 0%;
+    }
+
+    .topPart{
+        height: 40vh;
+        padding-bottom: 10vh;
+    }
+
     .contacts{
-        display: none;
+        font-size: 20px;
+        margin-left: 0%;
+        text-align: center;
+    }
+
+    .noheart{
+        color:#16019A;
+        font-family:all-round-gothic, sans-serif;
+        font-weight: 700;
+        font-style: normal;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -163,7 +190,7 @@ i{
         font-style: normal;
         width: 190vh;
         font-size: 30px;
-        padding-top: 12.4vh;
+        padding-top: 15vh;
     }
     .txt{
         padding-left: 10%;
@@ -172,7 +199,14 @@ i{
         width:100%;
         font-size: 24px;
         font-weight: 500;
-    
+
+    }
+
+    .noheart{
+        color:#16019A;
+        font-family:all-round-gothic, sans-serif;
+        font-weight: 700;
+        font-style: normal;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -182,7 +216,7 @@ i{
         font-weight: 600;
         font-style: normal;
         width: max-content;
-        padding-top: 12.4vh;
+        padding-top: 15vh;
         font-size: 30px;
     }
     .txt{
@@ -192,7 +226,13 @@ i{
         width:100%;
         font-size: 26px;
         font-weight: 500;
-    
+    }
+
+    .noheart{
+        color:#16019A;
+        font-family:all-round-gothic, sans-serif;
+        font-weight: 700;
+        font-style: normal;
     }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -202,7 +242,7 @@ i{
         font-weight: 600;
         font-style: normal;
         width: max-content;
-        padding-top: 22.4vh;
+        padding-top: 13vh;
         font-size: 30px;
     }
     .txt{
@@ -212,6 +252,13 @@ i{
         width:100%;
         font-size: 29px;
         font-weight: 500;
-    
+
+    }
+
+    .noheart{
+        color:#16019A;
+        font-family:all-round-gothic, sans-serif;
+        font-weight: 700;
+        font-style: normal;
     }
 }

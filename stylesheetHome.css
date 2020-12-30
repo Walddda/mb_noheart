@@ -1,24 +1,33 @@
 body{
     padding-top: 1px;
     margin-top: -1px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
- 
+
 .mainP{
     margin-top: 12.4vh;
+    transition: 250ms margin-top ease-in-out;
 }
 
 #desc{
     width:62%;
     text-align:center;
     color:#16019A;
-    font-weight:700;
+    font-weight:500;
     font-size:27px;
     font-family: brevia,sans-serif;
     margin-top:44vh;
     z-index:-1;
 }
+
+#noheart{
+  color:#16019A;
+  font-family:all-round-gothic, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 #heading {
     font-family: flood-std, sans-serif;
@@ -40,135 +49,219 @@ body{
     justify-content: center;
     align-items: center;
     height: 87.6vh;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 
 .container{
     max-width: 100%;
 }
 
-/* ANIMATIONEN */
-
-
-#desc {
-   opacity: 0;
+#indicator {
+  display: none;
 }
 
-#indicator {
-    margin-top: 81vh;
-    margin-left: 28%;
-
-    animation: jump 0.75s ease-out 0s infinite;
-    -moz-animation: jump 0.75s ease-out 0s infinite;
-    -webkit-animation: jump 0.75s ease-out 0s infinite;
-    -o-animation: jump 0.75s ease-out 0s infinite;
+@media only screen and (max-width: 800px) {
+  .shirtPicture{
+    width: 300px;
+    margin-left: 2vh;
+    position: static;
   }
 
-  #indicator:hover {
-      cursor: pointer;
+  .mainLeftShirt{
+    margin-top:2vh;
+    height:35vh;
   }
 
-  @keyframes jump {
-    0%{
-      transform: translateY(0em);
-    }
-    55%{
-      transform: translateY(-0.5em);
-    }
-    100%{
-      transform: translateY(0em);
-    }
-  }
-  @-moz-keyframes jump {
-    0%{
-      transform: translateY(0em);
-    }
-    55%{
-      transform: translateY(-0.5em);
-    }
-    100%{
-      transform: translateY(0em);
-    }
-  }
-  @-webkit-keyframes jump {
-    0%{
-      transform: translateY(0em);
-    }
-    55%{
-      transform: translateY(-0.5em);
-    }
-    100%{
-      transform: translateY(0em);
-    }
-  }
-  @-o-keyframes jump {
-    0%{
-      transform: translateY(0em);
-    }
-    55%{
-      transform: translateY(-0.5em);
-    }
-    100%{
-      transform: translateY(0em);
-    }
+  .desc{
+    margin-top: 2vh;
   }
 
+  #heading{
+    position: relative;
+    margin-top: 5vh;
+    font-size: 45px;
+    width:80%;
+  }
 
-  .anim {
-    animation: turnUp 0.75s ease-out 0.25s 1 both;
-    -moz-animation: turnUp 0.75s ease-out 0.25s 1 both;
-    -webkit-animation: turnUp 0.75s ease-out 0.25s 1 both;
-    -o-animation: turnUp 0.75s ease-out 0.25s 1 both;
+  .rutsch {
+    margin-top: 24.4vh;
   }
-  @keyframes turnUp {
-    0%{
-      transform: translateY(5em);
-      opacity: 0;
-    }
-    75% {
-      opacity: 1;
-    }
-    100%{
-      transform: translateY(-0em);
-      opacity: 1;
-    }
+  
+}
+
+@media only screen and (min-width: 800px) {
+  
+  figure {
+    margin-bottom: 0;
   }
-  @-moz-keyframes turnUp {
-    0%{
-      transform: translateY(5em);
-      opacity: 0;
-    }
-    75% {
-      opacity: 1;
-    }
-    100%{
-      transform: translateY(-0em);
-      opacity: 1;
-    }
+
+  .mainLeftShirt{
+    margin-top:17vh;
+    height:55vh;
   }
-  @-webkit-keyframes turnUp {
-    0%{
-      transform: translateY(5em);
-      opacity: 0;
-    }
-    75% {
-      opacity: 1;
-    }
-    100%{
-      transform: translateY(-0em);
-      opacity: 1;
-    }
+
+  .shirtPicture{
+    width: 450px;
+    margin-left: 1vh;
   }
-  @-o-keyframes turnUp {
-    0%{
-      transform: translateY(5em);
-      opacity: 0;
-    }
-    75% {
-      opacity: 1;
-    }
-    100%{
-      transform: translateY(-0em);
-      opacity: 1;
-    }
+
+  #desc {
+    margin: 0 auto;
+    font-size: 25px;
   }
+
+  .mainP{
+      margin-top: -5vh;
+      text-align: center;
+  }
+
+  #heading{
+    position: static;
+    display: inline;
+    font-size: 55px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #heading{
+    width: 50%;
+    font-size: 65px;
+    margin: 30vh auto 0 auto;
+  }
+  
+  #desc {
+    text-align: center;
+    margin: 2vh auto 0 auto;
+    
+  }
+}
+
+
+@media only screen and (min-width: 1200px){
+  /* ANIMATIONEN */
+  #indicator {
+    display: block;
+  }
+  #desc {
+    opacity: 0;
+  }
+
+  #indicator {
+   margin-top: 81vh;
+   margin-left: 28%;
+
+   animation: jump 0.75s ease-out 0s infinite;
+   -moz-animation: jump 0.75s ease-out 0s infinite;
+   -webkit-animation: jump 0.75s ease-out 0s infinite;
+   -o-animation: jump 0.75s ease-out 0s infinite;
+ }
+
+ #indicator:hover {
+     cursor: pointer;
+ }
+
+ @keyframes jump {
+   0%{
+     transform: translateY(0em);
+   }
+   55%{
+     transform: translateY(-0.5em);
+   }
+   100%{
+     transform: translateY(0em);
+   }
+ }
+ @-moz-keyframes jump {
+   0%{
+     transform: translateY(0em);
+   }
+   55%{
+     transform: translateY(-0.5em);
+   }
+   100%{
+     transform: translateY(0em);
+   }
+ }
+ @-webkit-keyframes jump {
+   0%{
+     transform: translateY(0em);
+   }
+   55%{
+     transform: translateY(-0.5em);
+   }
+   100%{
+     transform: translateY(0em);
+   }
+ }
+ @-o-keyframes jump {
+   0%{
+     transform: translateY(0em);
+   }
+   55%{
+     transform: translateY(-0.5em);
+   }
+   100%{
+     transform: translateY(0em);
+   }
+ }
+
+
+ .anim {
+   animation: turnUp 0.75s ease-out 0.25s 1 both;
+   -moz-animation: turnUp 0.75s ease-out 0.25s 1 both;
+   -webkit-animation: turnUp 0.75s ease-out 0.25s 1 both;
+   -o-animation: turnUp 0.75s ease-out 0.25s 1 both;
+ }
+ @keyframes turnUp {
+   0%{
+     transform: translateY(5em);
+     opacity: 0;
+   }
+   75% {
+     opacity: 1;
+   }
+   100%{
+     transform: translateY(-0em);
+     opacity: 1;
+   }
+ }
+ @-moz-keyframes turnUp {
+   0%{
+     transform: translateY(5em);
+     opacity: 0;
+   }
+   75% {
+     opacity: 1;
+   }
+   100%{
+     transform: translateY(-0em);
+     opacity: 1;
+   }
+ }
+ @-webkit-keyframes turnUp {
+   0%{
+     transform: translateY(5em);
+     opacity: 0;
+   }
+   75% {
+     opacity: 1;
+   }
+   100%{
+     transform: translateY(-0em);
+     opacity: 1;
+   }
+ }
+ @-o-keyframes turnUp {
+   0%{
+     transform: translateY(5em);
+     opacity: 0;
+   }
+   75% {
+     opacity: 1;
+   }
+   100%{
+     transform: translateY(-0em);
+     opacity: 1;
+   }
+ }
+}

@@ -5,17 +5,16 @@ body{
     /* overflow: hidden; */
     /*-ms-overflow-style: none;  /* IE and Edge */
     /*scrollbar-width: none;  /* Firefox */
+    /*background-color: #f7f7f7;*/
     background-color: #f7f7f7;
-    
 }
-.mainP{
-    /* overflow: auto; */
-}
+
+
  /* Hide scrollbar for Chrome, Safari and Opera */
  /*::-webkit-scrollbar {
     display: none;
   }
-  
+
   /* Hide scrollbar for IE, Edge and Firefox */
   /*html {
     -ms-overflow-style: none;  /* IE and Edge */
@@ -24,20 +23,33 @@ body{
 
 nav{
     height: 10%;
-    font-family: brevia,sans-serif;
+    font-family: all-round-gothic, sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 33px;
     color:rgb(33, 37, 41);
 }
-
+.curSec{
+    color: #ffa53f;
+}
+.curSecU{
+    text-decoration: underline;
+    text-decoration-color: #ffa53f;
+    text-decoration-thickness: 4px;
+}
 a:hover{
     text-decoration: none;
-    color:#16019A;
+    color:#ffa53f ;
 }
-
-.logo > img{
-    height:350%;
+.curSec:hover{
+    text-decoration: none;
+    color:#ffa53f ;
+}
+.curSecU:hover{
+    text-decoration: underline;
+    text-decoration-color: #ffa53f;
+    text-decoration-thickness: 4px;
+    color:#ffa53f ;
 }
 
 .logo{
@@ -48,11 +60,11 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-.aboutUs > svg{
-    height:200%;
+.linePicture > svg{
+    height:300%;
 }
 
-.aboutUs{
+.linePicture{
     padding-left: 1%;
     height: 8vh;
     margin-top: 8vh;
@@ -71,7 +83,7 @@ a:hover{
 }
 
 .black-stripe{
-    background-color: black;
+    background-color:#16019A;
     height:5px;
     margin-top: 12.2vh;
 }
@@ -96,12 +108,12 @@ a:hover{
     z-index: 1;
 }
 
-/* ------------------------------ */ 
+/* ------------------------------ */
 .headerMobile{
     display: none;
     position: fixed;
     background-color: #f7f7f7;
-    z-index: 1;
+    z-index: 1 ;
 }
 
 .logoM{
@@ -123,6 +135,7 @@ a:hover{
     padding-top: 15px;
     padding-left: 15px;
 }
+
 .burgerMenuM {
     width: 55%;
     height: 2px;
@@ -132,9 +145,23 @@ a:hover{
 
 .headerRowM{
     padding-bottom: 15px;
-    border-bottom: black 3px solid ;
+    border-bottom:#16019A 3px solid ;
     background-color: #f7f7f7;
 }
+
+.headerRowM {
+    height: 12vh;
+}
+
+.headerRowM > * {
+    padding-top: 0;
+    height: 12vh;
+}
+
+.menue {
+    display: none;
+    z-index: 1 ;
+  }
 
 @media only screen and (max-width: 800px) {
     .headerDesktop {
@@ -142,17 +169,87 @@ a:hover{
     }
     .headerMobile{
         display: block;
+        padding:0;
+    }
+
+    .logoM{
+        margin-left: 0vh;
+      }
+    
+    .logoMImg{
+        margin-left: 70px;
+      }
+    
+    /*-------------------------------------------------------*/
+    /*Hamburger Menu*/
+
+    .menue {
+        margin-top: 12vh;
+        height: 0;
+        overflow: hidden;
+        position: fixed;
+        transition: 250ms height ease-in-out;
+        width: 100%;
+
+        background: #eee;
+        display: flex;
+        justify-content: center;
+    
+        text-decoration: none;
+    }
+    .nav-toggle {
+        position: absolute;
+    }
+    .open {
+        height: 150px;
+    }
+    
+    .navIcon {
+        display: block;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    ul {
+        padding: 0;
+        text-align: left;
+    }
+    
+    li a{
+        text-decoration: none;
+    }
+    
+    li {
+        list-style-type: none;
+        
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    .spaceLi{
+        margin-left: 5px;
+        display: inline;
+    
+        font-family: all-round-gothic, sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 20px;
+    }
+    .linkTo {
+        color:#16019A;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 800px) {
     a{
-        font-family: brevia,sans-serif;
-        font-weight: 500;
+        font-family: all-round-gothic, sans-serif;
+        font-weight: 700;
         font-style: normal;
-        font-size: 18px;
+        font-size: 20px;
         text-decoration:none;
-        color:rgb(33, 37, 41);
+        color:#16019A;
     }
     .border{
         width: 2px;
@@ -163,22 +260,22 @@ a:hover{
     }
     .navBar{
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
         margin-right: 15%;
-        margin-top: 5vh;
+        margin-top: 4.5vh;
     }
 
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     a{
-        font-family: brevia,sans-serif;
-        font-weight: 500;
+        font-family: all-round-gothic, sans-serif;
+        font-weight: 600;
         font-style: normal;
-        font-size: 20px;
+        font-size: 24px;
         text-decoration:none;
-        color:rgb(33, 37, 41);
+        color:#16019A;
     }
     .border{
         width: 2px;
@@ -189,21 +286,21 @@ a:hover{
     }
     .navBar{
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
         margin-right: 15%;
-        margin-top: 5vh;
+        margin-top: 4.5vh;
     }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     a{
-        font-family: brevia,sans-serif;
-        font-weight: 500;
+        font-family: all-round-gothic, sans-serif;
+        font-weight: 600;
         font-style: normal;
-        font-size: 28px;
+        font-size: 30px;
         text-decoration:none;
-        color:rgb(33, 37, 41);
+        color:#16019A;
     }
     .border{
         width: 2px;
@@ -214,9 +311,9 @@ a:hover{
     }
     .navBar{
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
         margin-right: 15%;
-        margin-top: 3.8vh;
+        margin-top: 4.3vh;
     }
 }
