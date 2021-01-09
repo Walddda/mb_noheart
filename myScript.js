@@ -3,12 +3,19 @@
 //buttons to swap between products --> Array with only one entry
 let left = document.getElementsByClassName('leftArrow');
 let right = document.getElementsByClassName('rightArrow');
+let leftM = document.getElementsByClassName('leftArrowM');
+let rightM = document.getElementsByClassName('rightArrowM');
 //content of products --> Array with 3 entrys
 let inhalt = document.getElementsByClassName('product');
+//mobile images boxes
+let inhaltM = document.getElementsByClassName('imageProductM');
 //stores number of current product --> switches between 0, 1 or 2
 let count;
 //stores former selected product
 let oldCount;
+
+//mobile stuff
+let mobile = document.getElementsByClassName('mobileFunkt');
 
 //gets current product number by looking for displayed
 for (i = 0; i < inhalt.length; i++) {
@@ -25,6 +32,10 @@ let creme = document.getElementsByClassName('creme');
 let whiteRad = document.getElementsByClassName('whiteRad');
 let blackRad = document.getElementsByClassName('blackRad');
 let cremeRad = document.getElementsByClassName('cremeRad');
+//the same for mobile
+let whiteRadM = document.getElementsByClassName('whiteRadM');
+let blackRadM = document.getElementsByClassName('blackRadM');
+let cremeRadM = document.getElementsByClassName('cremeRadM');
 //stores current color
 let currentCol = 0;
 
@@ -58,117 +69,140 @@ pictureSwap();
 //colorSwap() creates clickevents for the radiobuttons
 colorSwap();
 
-// event listener for left arrow, switch products
-console.log(left);
-left[0].addEventListener("click", function(){arrowPress('left')});
-right[0].addEventListener("click", function(){arrowPress('right')});
-function arrowPress(direction){
-  console.log(direction+": "+count);
+//productSwap() creates clickevents for arrows
+productSwap();
+function productSwap(){
+  // event listener for left arrow, switch products
+  left[0].addEventListener("click", function(){productSwapActivated('l')});
+  right[0].addEventListener("click", function(){productSwapActivated('r')});
+  leftM[0].addEventListener("click", function(){productSwapActivatedM('l')});
+  rightM[0].addEventListener("click", function(){productSwapActivatedM('r')});
+}
+
+//changes product when arrow is clicked
+function productSwapActivated(direction){
+  console.log('productSwapActivated'+count);
   //stores former count
   oldCount = count;
   //if left arrow is pressed, decrease count
-  if(direction == 'left'){
+  if(direction == 'l'){
     count--;
     if(count<0){
       //if count is lower than 0 change it to highest product
       count = inhalt.length-1;
     }
-  }else if(direction == 'right'){
+  }else if(direction == 'r'){
     count++;
     if(count>inhalt.length-1){
       //if count is higher than highest product change it to lowest product
       count = 0;
     }
   }
-  //function to ...
-  lol();
+  //changes color to black when changing product
+  for (i = 0; i < white.length; i++) {
+    white[i].style.display = 'none';
+    creme[i].style.display = 'none';
+    black[i].style.display = 'block';
+  }
+  //hide all images except black front image of product
+  for (i = 0; i < frontPic.length; i++){
+    backPic[i].style.display = 'none';
+    closePic[i].style.display = 'none';
+    if(frontPic[i].classList[1] != "black"){
+      frontPic[i].style.display = 'none';
+    }
+  }
+  
+  //prepare Buttons
+  pictureSwap();
+  colorSwap();
+
+  //hide old productbox and displays new product
+  inhalt[oldCount].style.display = 'none';
+  inhalt[count].style.display = 'flex';
 }
 
-function lol(){
-    var i;
-    for (i = 0; i < white.length; i++) {
-      white[i].style.display = 'none';
-      creme[i].style.display = 'none';
-      black[i].style.display = 'block';
+//changes product when arrow is clicked - MOBILE
+function productSwapActivatedM(direction){
+  console.log('productSwapActivatedMobile'+count);
+  //stores former count
+  oldCount = count;
+  //if left arrow is pressed, decrease count
+  if(direction == 'l'){
+    count--;
+    if(count<0){
+      //if count is lower than 0 change it to highest product
+      count = inhalt.length-1;
     }
-    for (i = 0; i < frontPic.length; i++){
-      backPic[i].style.display = 'none';
-      closePic[i].style.display = 'none';
-      if(frontPic[i].classList[1] != "black"){
-        frontPic[i].style.display = 'none';
-      }
+  }else if(direction == 'r'){
+    count++;
+    if(count>inhalt.length-1){
+      //if count is higher than highest product change it to lowest product
+      count = 0;
     }
-    pictureSwap();
-    inhalt[oldCount].style.display = 'none';
-    inhalt[count].style.display = 'flex';
-    whiteRad[count].onclick = function() {
-      console.log('whiteRad2: '+count);
-      pictureSwap();
-      var i;
-      for (i = 0; i < white.length; i++) {
-        white[i].style.display = 'block';
-        creme[i].style.display = 'none';
-        black[i].style.display = 'none';
-      }
-    }
-    blackRad[count].onclick = function() {
-      console.log('blackRad2: '+count);
-      pictureSwap();
-      var i;
-      for (i = 0; i < white.length; i++) {
-        white[i].style.display = 'none';
-        creme[i].style.display = 'none';
-        black[i].style.display = 'block';
-      }
-    }
-    cremeRad[count].onclick = function() {
-      console.log('cremeRad2: '+count);
-      pictureSwap();
-      var i;
-      for (i = 0; i < white.length; i++) {
-        white[i].style.display = 'none';
-        creme[i].style.display = 'block';
-        black[i].style.display = 'none';
-      }
-    }
-    
+  }
+  //changes color to black when changing product
+  for (i = 0; i < white.length; i++) {
+    white[i].style.display = 'none';
+    creme[i].style.display = 'none';
+    black[i].style.display = 'block';
+  }
+  
+  //prepare colorswitch buttons
+  colorSwap();
+
+  //hide old productbox & images and displays new product & images 
+  inhalt[oldCount].style.display = 'none';
+  inhalt[count].style.display = 'flex';
+  inhaltM[oldCount].style.display = 'none';
+  inhaltM[count].style.display = 'flex';
 }
 
-
+//prepares colorSwapButtons
 function colorSwap(){
   whiteRad[count].onclick = function() {
-    console.log('whiteRad: '+count);
-    pictureSwap();
-    var i;
-    for (i = 0; i < white.length; i++) {
+    colorSwapActivated('w');
+  }
+  blackRad[count].onclick = function() {
+    colorSwapActivated('b');
+  }
+  cremeRad[count].onclick = function() {
+    colorSwapActivated('c');
+  }
+  whiteRadM[count].onclick = function() {
+    colorSwapActivated('w');
+  }
+  blackRadM[count].onclick = function() {
+    colorSwapActivated('b');
+  }
+  cremeRadM[count].onclick = function() {
+    colorSwapActivated('c');
+  }
+}
+
+//change color
+function colorSwapActivated(color){
+  pictureSwap();
+  console.log('colorSwapActivated: '+color+count);
+  var i;
+  for (i = 0; i < white.length; i++) {
+    if(color == 'w'){
       white[i].style.display = 'block';
       creme[i].style.display = 'none';
       black[i].style.display = 'none';
-    }
-  }
-  blackRad[count].onclick = function() {
-    console.log('blackRad: '+count);
-    pictureSwap();
-    var i;
-    for (i = 0; i < white.length; i++) {
+    }else if(color == 'b'){
       white[i].style.display = 'none';
-      creme[i].style.display = 'none';
       black[i].style.display = 'block';
-    }
-  }
-  cremeRad[count].onclick = function() {
-    console.log('cremeRad: '+count);
-    pictureSwap();
-    var i;
-    for (i = 0; i < white.length; i++) {
+      creme[i].style.display = 'none';
+    }else if(color == 'c'){
       white[i].style.display = 'none';
-      creme[i].style.display = 'block';
       black[i].style.display = 'none';
+      creme[i].style.display = 'block';
     }
   }
 }
 
-
+//prepares buttons to swap image
 function pictureSwap() {
   let j = 0;
   for (i = 0; i < frontPicBut.length; i++) {
@@ -178,24 +212,34 @@ function pictureSwap() {
     }
   }
   currentColorDesign = blackFrontPicButs[count];
+  console.log(currentColorDesign);
   frontPic[currentColorDesign].style.display = 'block';
   backPic[currentColorDesign].style.display = 'none';
   closePic[currentColorDesign].style.display = 'none';
 
   frontPicBut[currentColorDesign].onclick = function(){
-    console.log('frontPicBut: '+currentColorDesign);
+    pictureSwapActivated('f');
+  }
+  backPicBut[currentColorDesign].onclick = function(){
+    pictureSwapActivated('b');
+  }
+  closePicBut[currentColorDesign].onclick = function(){
+    pictureSwapActivated('c');
+  }
+}
+
+//changes image when prewiev is clicked
+function pictureSwapActivated(image){
+  console.log('pictureSwapActivated: '+count+image+currentColorDesign);
+  if(image == 'f'){
     frontPic[currentColorDesign].style.display = 'block';
     backPic[currentColorDesign].style.display = 'none';
     closePic[currentColorDesign].style.display = 'none';
-  }
-  backPicBut[currentColorDesign].onclick = function(){
-    console.log('backPicBut: '+currentColorDesign);
+  }else if(image == 'b'){
     frontPic[currentColorDesign].style.display = 'none';
     backPic[currentColorDesign].style.display = 'block';
     closePic[currentColorDesign].style.display = 'none';
-  }
-  closePicBut[currentColorDesign].onclick = function(){
-    console.log('closePicBut: '+currentColorDesign);
+  }else if(image == 'c'){
     frontPic[currentColorDesign].style.display = 'none';
     backPic[currentColorDesign].style.display = 'none';
     closePic[currentColorDesign].style.display = 'block';

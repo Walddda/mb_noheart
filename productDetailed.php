@@ -41,6 +41,8 @@
             </nav>
         </div>
     </header>
+
+    <!-- Header for Mobile -->
     <header class="container headerMobile">
         <div class="row headerRowM">
             <div class="col-3 logoM">
@@ -56,29 +58,84 @@
         </div>
     </header>
 
+     <!-- mobile nav bar -->
+     <div id="menue" class="menue">
+        <ul>
+          <li><a href="index.html">
+          <img src="https://s.svgbox.net/materialui.svg?ic=home&fill=16019a" width="32" height="32"><p class="spaceLi linkTo">home</p>
+          </a></li>
+          <li><a href="products.html">
+          <img src="https://s.svgbox.net/hero-solid.svg?ic=collection&fill=16019a" width="32" height="32"><p class="spaceLi linkTo curSecU">products</p></a></li>
+          <li><a href="info.html">
+          <img src="https://s.svgbox.net/hero-solid.svg?ic=information-circle&fill=16019a" width="32" height="32"><p class="spaceLi linkTo">info</p>
+          </a></li>
+        </ul>
+    </div>
 
-
-    <div class="mainP">
-    <!-- -->
+    <div class="mainP" id="mainP">
         <?php //var_dump($_POST);
         ?>
+        <!-- Images for mobile -->
         <div class="mobileFunkt imageBoxM">
-            <div class="picturesM white">
-                <img src="pictures/signatureShirt/shirt_front_white_signature.svg" alt="SigShirt" class="productImageM frontPicM">
-                <img src="pictures/signatureShirt/shirt_back_white.svg" alt="SigShirt" class="productImageM backPicM">
-                <img src="pictures/signatureShirt/closeup/closeup_white_signature.svg" alt="SigShirt" class="productImageM closePicM">
-            </div>
-        
-            <div class="picturesM black">
-                <img src="pictures/signatureShirt/shirt_front_black_signature.svg" alt="SigShirt" class="productImageM frontPic">
-                <img src="pictures/signatureShirt/shirt_back_black.svg" alt="SigShirt" class="productImageM backPicM">
-                <img src="pictures/signatureShirt/closeup/closeup_black_signature.svg" alt="SigShirt" class="productImageM closePicM">
-            </div>
+            <div class="signatureShirtImages imageProductM" <?php if ($_POST['val'] != 0) {
+                    echo 'style="display:none"';}?>>
+                <div class="picturesM white">
+                    <img src="pictures/signatureShirt/shirt_front_white_signature.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/signatureShirt/shirt_back_white.svg" alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/signatureShirt/closeup/closeup_white_signature.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
+            
+                <div class="picturesM black">
+                    <img src="pictures/signatureShirt/shirt_front_black_signature.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/signatureShirt/shirt_back_black.svg" alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/signatureShirt/closeup/closeup_black_signature.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
 
-            <div class="picturesM creme">
-                <img src="pictures/signatureShirt/shirt_front_creme_signature.svg" alt="SigShirt" class="productImageM frontPicM">
-                <img src="pictures/signatureShirt/shirt_back_creme.svg" alt="SigShirt" class="productImageM backPicM">
-                <img src="pictures/signatureShirt/closeup/closeup_creme_signature.svg" alt="SigShirt" class="productImageM closePicM">
+                <div class="picturesM creme">
+                    <img src="pictures/signatureShirt/shirt_front_creme_signature.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/signatureShirt/shirt_back_creme.svg" alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/signatureShirt/closeup/closeup_creme_signature.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
+            </div>
+            <div class="dystopianShirtImages imageProductM" <?php if ($_POST['val'] != 1) {
+                    echo 'style="display:none"';}?>>
+                <div class="picturesM white">
+                    <img src="pictures/dystopianShirt/shirt_front_white_dystopian.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/dystopianShirt/shirt_back_white_dystopian.svg" alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/dystopianShirt/closeup/closeup_white_dystopian.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
+            
+                <div class="picturesM black">
+                    <img src="pictures/dystopianShirt/shirt_front_black_dystopian.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/dystopianShirt/shirt_back_black_dystopian.svg"alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/dystopianShirt/closeup/closeup_black_dystopian.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
+
+                <div class="picturesM creme">
+                    <img src="pictures/dystopianShirt/shirt_front_creme_dystopian.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/dystopianShirt/shirt_back_creme_dystopian.svg" alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/dystopianShirt/closeup/closeup_creme_dystopian.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
+            </div>
+            <div class="dystopianHoodieImages imageProductM" <?php if ($_POST['val'] != 2) {
+                    echo 'style="display:none"';}?>>
+                <div class="picturesM white">
+                    <img src="pictures/dystopianHoodie/hoodie_front_white_dystopian.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/dystopianHoodie/hoodie_back_white_dystopian.svg" alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/dystopianHoodie/closeup/closeup_white_dystopian.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
+            
+                <div class="picturesM black">
+                    <img src="pictures/dystopianHoodie/hoodie_front_black_dystopian.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/dystopianHoodie/hoodie_back_black_dystopian.svg" alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/dystopianHoodie/closeup/closeup_black_dystopian.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
+
+                <div class="picturesM creme">
+                    <img src="pictures/dystopianHoodie/hoodie_front_creme_dystopian.svg" alt="SigShirt" class="productImageM frontPicM">
+                    <img src="pictures/dystopianHoodie/hoodie_back_creme_dystopian.svg" alt="SigShirt" class="productImageM backPicM">
+                    <img src="pictures/dystopianHoodie/closeup/closeup_creme_dystopian.svg" alt="SigShirt" class="productImageM closePicM">
+                </div>
             </div>
         </div>
         <section class="topBoxnarrows">
@@ -89,7 +146,7 @@
                     echo 'style="display:none"';}?>>
                     <div class="container">
                         <div class="row prodBoxRow">
-                            <div class="col-12 col-sm-12 col-xs-12 col-md-3 col-lg-3 col-xl-3 leftBlock">
+                            <div class="col-12 col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-3 leftBlock">
                                 <div class="desktopFunkt">
                                     <!-- Front, Back and Close Up pics from shirt-->
                                     <img src="pictures/signatureShirt/shirt_front_white_signature.svg" alt="SigShirt" class="productImage white frontPic">
@@ -182,7 +239,27 @@
                             </div>
 
                             <!-- Right side, text and detailed information-->
-                            <div class="productDesc col-12 col-sm-12 col-xs-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="productDesc col-12 col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-8">
+                                <div class="mobileFunkt radPointsM">
+                                    <div class="pointsM">
+                                        <label class="control control-radio whiteRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_white"></div>
+                                        </label>
+                                        
+                                        <!-- Black Radio Button -->
+                                        <label class="control control-radio blackRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_black"></div>
+                                        </label>
+
+                                        <!-- Creme Radio Button -->
+                                        <label class="control control-radio cremeRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_creme"></div>
+                                        </label>
+                                    </div>
+                                </div>
                                 <h1>Signature Shirt</h1>
 
                                 <p>
@@ -205,79 +282,81 @@
                     echo 'style="display:none"';}?>>
                     <div class="container">
                         <div class="row prodBoxRow">
-                            <div class="col-3 leftBlock">
+                            <div class="col-12 col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-3 leftBlock">
+                                <div class="desktopFunkt">
 
-                                <!-- Front, Back and Close Up pics from shirt-->
-                                <img src="pictures/dystopianShirt/shirt_front_white_dystopian.svg" alt="Dystopian Shirt White Front" class="productImage white frontPic">
-                                <img src="pictures/dystopianShirt/shirt_back_white_dystopian.svg" alt="Dystopian Shirt White Back" class="productImage backPic">
-                                <img src="pictures/dystopianShirt/closeup/closeup_white_dystopian.svg" alt="Dystopian Shirt White Closeup" class="productImage closePic">
+                                    <!-- Front, Back and Close Up pics from shirt-->
+                                    <img src="pictures/dystopianShirt/shirt_front_white_dystopian.svg" alt="Dystopian Shirt White Front" class="productImage white frontPic">
+                                    <img src="pictures/dystopianShirt/shirt_back_white_dystopian.svg" alt="Dystopian Shirt White Back" class="productImage backPic">
+                                    <img src="pictures/dystopianShirt/closeup/closeup_white_dystopian.svg" alt="Dystopian Shirt White Closeup" class="productImage closePic">
 
-                                <img src="pictures/dystopianShirt/shirt_front_black_dystopian.svg" alt="Dystopian Shirt Black Front" class="productImage black frontPic">
-                                <img src="pictures/dystopianShirt/shirt_back_black_dystopian.svg" alt="Dystopian Shirt Black Back" class="productImage backPic">
-                                <img src="pictures/dystopianShirt/closeup/closeup_black_dystopian.svg" alt="Dystopian Shirt Black Closeup" class="productImage closePic">
+                                    <img src="pictures/dystopianShirt/shirt_front_black_dystopian.svg" alt="Dystopian Shirt Black Front" class="productImage black frontPic">
+                                    <img src="pictures/dystopianShirt/shirt_back_black_dystopian.svg" alt="Dystopian Shirt Black Back" class="productImage backPic">
+                                    <img src="pictures/dystopianShirt/closeup/closeup_black_dystopian.svg" alt="Dystopian Shirt Black Closeup" class="productImage closePic">
 
-                                <img src="pictures/dystopianShirt/shirt_front_creme_dystopian.svg" alt="Dystopian Shirt Creme Fron" class="productImage creme frontPic">
-                                <img src="pictures/dystopianShirt/shirt_back_creme_dystopian.svg" alt="Dystopian Shirt Creme Back" class="productImage backPic">
-                                <img src="pictures/dystopianShirt/closeup/closeup_creme_dystopian.svg" alt="Dystopian Shirt Creme Closeup" class="productImage closePic">
+                                    <img src="pictures/dystopianShirt/shirt_front_creme_dystopian.svg" alt="Dystopian Shirt Creme Fron" class="productImage creme frontPic">
+                                    <img src="pictures/dystopianShirt/shirt_back_creme_dystopian.svg" alt="Dystopian Shirt Creme Back" class="productImage backPic">
+                                    <img src="pictures/dystopianShirt/closeup/closeup_creme_dystopian.svg" alt="Dystopian Shirt Creme Closeup" class="productImage closePic">
 
-                                <!-- Buttons to switch from front, back and closeup-->
-                                    <!-- White Buttons Signature Shirt -->
-                                <div class="container content white">
-                                    <div class="row">
-                                        <div class="col-4 frontPicBut white" >
-                                            <img src="pictures/dystopianShirt/shirt_front_white_dystopian_preview.svg" class="pics" alt="Dystopian Shirt Button White Front">
-                                        </div>
-                                        <div class="col-4 backPicBut white">
-                                            <img src="pictures/dystopianShirt/shirt_back_white_dystopian_preview.svg" class="pics" alt="Dystopian Shirt Button White Back">
-                                        </div>
-                                        <div class="col-4 closePicBut white">
-                                            <img src="pictures/dystopianShirt/closeup/closeup_white_dystopian.svg" class="pics" alt="Dystopian Shirt Button White Closeup">
+                                    <!-- Buttons to switch from front, back and closeup-->
+                                        <!-- White Buttons Signature Shirt -->
+                                    <div class="container content white">
+                                        <div class="row">
+                                            <div class="col-4 frontPicBut white" >
+                                                <img src="pictures/dystopianShirt/shirt_front_white_dystopian_preview.svg" class="pics" alt="Dystopian Shirt Button White Front">
+                                            </div>
+                                            <div class="col-4 backPicBut white">
+                                                <img src="pictures/dystopianShirt/shirt_back_white_dystopian_preview.svg" class="pics" alt="Dystopian Shirt Button White Back">
+                                            </div>
+                                            <div class="col-4 closePicBut white">
+                                                <img src="pictures/dystopianShirt/closeup/closeup_white_dystopian.svg" class="pics" alt="Dystopian Shirt Button White Closeup">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="container content black">
-                                    <div class="row">
-                                        <div class="col-4 frontPicBut black" >
-                                            <img src="pictures/dystopianShirt/shirt_front_black_dystopian.svg" class="pics" alt="Dystopian Shirt Button Black Front">
-                                        </div>
-                                        <div class="col-4 backPicBut black">
-                                            <img src="pictures/dystopianShirt/shirt_back_black_dystopian.svg" class="pics" alt="Dystopian Shirt Button Black Back">
-                                        </div>
-                                        <div class="col-4 closePicBut black">
-                                            <img src="pictures/dystopianShirt/closeup/closeup_black_dystopian.svg" class="pics" alt="Dystopian Shirt Button Black Closeup">
+                                    <div class="container content black">
+                                        <div class="row">
+                                            <div class="col-4 frontPicBut black" >
+                                                <img src="pictures/dystopianShirt/shirt_front_black_dystopian.svg" class="pics" alt="Dystopian Shirt Button Black Front">
+                                            </div>
+                                            <div class="col-4 backPicBut black">
+                                                <img src="pictures/dystopianShirt/shirt_back_black_dystopian.svg" class="pics" alt="Dystopian Shirt Button Black Back">
+                                            </div>
+                                            <div class="col-4 closePicBut black">
+                                                <img src="pictures/dystopianShirt/closeup/closeup_black_dystopian.svg" class="pics" alt="Dystopian Shirt Button Black Closeup">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="container content creme">
-                                    <div class="row">
-                                        <div class="col-4 frontPicBut creme" >
-                                            <img src="pictures/dystopianShirt/shirt_front_creme_dystopian_preview.svg" class="pics" alt="Dystopian Shirt Button Creme Front">
-                                        </div>
-                                        <div class="col-4 backPicBut creme">
-                                            <img src="pictures/dystopianShirt/shirt_back_creme_dystopian_preview.svg" class="pics" alt="Dystopian Shirt Button Creme Back">
-                                        </div>
-                                        <div class="col-4 closePicBut creme">
-                                            <img src="pictures/dystopianShirt/closeup/closeup_creme_dystopian.svg" class="pics" alt="Dystopian Shirt Button Creme Closeup">
+                                    <div class="container content creme">
+                                        <div class="row">
+                                            <div class="col-4 frontPicBut creme" >
+                                                <img src="pictures/dystopianShirt/shirt_front_creme_dystopian_preview.svg" class="pics" alt="Dystopian Shirt Button Creme Front">
+                                            </div>
+                                            <div class="col-4 backPicBut creme">
+                                                <img src="pictures/dystopianShirt/shirt_back_creme_dystopian_preview.svg" class="pics" alt="Dystopian Shirt Button Creme Back">
+                                            </div>
+                                            <div class="col-4 closePicBut creme">
+                                                <img src="pictures/dystopianShirt/closeup/closeup_creme_dystopian.svg" class="pics" alt="Dystopian Shirt Button Creme Closeup">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Radio Buttons -->
-                                <div class="points">
-                                    <label class="control control-radio whiteRad">
-                                            <input type="radio" name="radio" />
-                                        <div class="control_indicator control_indicator_white"></div>
-                                    </label>
-                                    <label class="control control-radio blackRad">
-                                            <input type="radio" name="radio" />
-                                        <div class="control_indicator control_indicator_black"></div>
-                                    </label>
-                                    <label class="control control-radio cremeRad">
-                                            <input type="radio" name="radio" />
-                                        <div class="control_indicator control_indicator_creme"></div>
-                                    </label>
+                                    <!-- Radio Buttons -->
+                                    <div class="points">
+                                        <label class="control control-radio whiteRad">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_white"></div>
+                                        </label>
+                                        <label class="control control-radio blackRad">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_black"></div>
+                                        </label>
+                                        <label class="control control-radio cremeRad">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_creme"></div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -287,7 +366,27 @@
                             </div>
 
                             <!-- Right side, text and detailed information-->
-                            <div class="productDesc col-8">
+                            <div class="productDesc col-12 col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-8">
+                                <div class="mobileFunkt radPointsM">
+                                    <div class="pointsM">
+                                        <label class="control control-radio whiteRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_white"></div>
+                                        </label>
+                                        
+                                        <!-- Black Radio Button -->
+                                        <label class="control control-radio blackRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_black"></div>
+                                        </label>
+
+                                        <!-- Creme Radio Button -->
+                                        <label class="control control-radio cremeRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_creme"></div>
+                                        </label>
+                                    </div>
+                                </div>
                                 <h1> Dystopian Shirt </h1>
                                 <p>
                                 This piece channels the collection’s dystopian theme, 
@@ -308,84 +407,85 @@
                 </div>
                 <div class="product" id="dystHood" <?php if ($_POST['val'] != 2) {
                     echo 'style="display:none"';}?>>
-
                     <div class="container">
                         <div class="row prodBoxRow">
-                            <div class="col-3 leftBlock">
+                            <div class="col-12 col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-3 leftBlock">
+                                <div class="desktopFunkt">
 
 
 
 
-                                <!-- Front, Back and Close Up pics from Hoodie-->
-                                <img src="pictures/dystopianHoodie/hoodie_front_white_dystopian.svg" alt="Dystopian Hoodie White Front" class="productImage white frontPic hoodPics">
-                                <img src="pictures/dystopianHoodie/hoodie_back_white_dystopian.svg" alt="Dystopian Hoodie White Back" class="productImage backPic hoodPics">
-                                <img src="pictures/dystopianHoodie/closeup/closeup_white_dystopian.svg" alt="Dystopian Hoodie White Closeup" class="productImage closePic">
+                                    <!-- Front, Back and Close Up pics from Hoodie-->
+                                    <img src="pictures/dystopianHoodie/hoodie_front_white_dystopian.svg" alt="Dystopian Hoodie White Front" class="productImage white frontPic hoodPics">
+                                    <img src="pictures/dystopianHoodie/hoodie_back_white_dystopian.svg" alt="Dystopian Hoodie White Back" class="productImage backPic hoodPics">
+                                    <img src="pictures/dystopianHoodie/closeup/closeup_white_dystopian.svg" alt="Dystopian Hoodie White Closeup" class="productImage closePic">
 
-                                <img src="pictures/dystopianHoodie/hoodie_front_black_dystopian.svg" alt="Dystopian Hoodie Black Front" class="productImage black frontPic hoodPics">
-                                <img src="pictures/dystopianHoodie/hoodie_back_black_dystopian.svg" alt="Dystopian Hoodie Black Back" class="productImage backPic hoodPics">
-                                <img src="pictures/dystopianHoodie/closeup/closeup_black_dystopian.svg" alt="Dystopian Hoodie Black Closeup" class="productImage closePic">
+                                    <img src="pictures/dystopianHoodie/hoodie_front_black_dystopian.svg" alt="Dystopian Hoodie Black Front" class="productImage black frontPic hoodPics">
+                                    <img src="pictures/dystopianHoodie/hoodie_back_black_dystopian.svg" alt="Dystopian Hoodie Black Back" class="productImage backPic hoodPics">
+                                    <img src="pictures/dystopianHoodie/closeup/closeup_black_dystopian.svg" alt="Dystopian Hoodie Black Closeup" class="productImage closePic">
 
-                                <img src="pictures/dystopianHoodie/hoodie_front_creme_dystopian.svg" alt="Dystopian Hoodie Creme Front" class="productImage creme frontPic hoodPics">
-                                <img src="pictures/dystopianHoodie/hoodie_back_creme_dystopian.svg" alt="Dystopian Hoodie Creme Back" class="productImage backPic hoodPics">
-                                <img src="pictures/dystopianHoodie/closeup/closeup_creme_dystopian.svg" alt="Dystopian Hoodie Creme Closeup" class="productImage closePic">
+                                    <img src="pictures/dystopianHoodie/hoodie_front_creme_dystopian.svg" alt="Dystopian Hoodie Creme Front" class="productImage creme frontPic hoodPics">
+                                    <img src="pictures/dystopianHoodie/hoodie_back_creme_dystopian.svg" alt="Dystopian Hoodie Creme Back" class="productImage backPic hoodPics">
+                                    <img src="pictures/dystopianHoodie/closeup/closeup_creme_dystopian.svg" alt="Dystopian Hoodie Creme Closeup" class="productImage closePic">
 
-                                <!-- Buttons to switch from front, back and closeup-->
-                                <div class="container content white">
-                                    <div class="row">
-                                        <div class="col-4 frontPicBut white" >
-                                            <img src="pictures/dystopianHoodie/hoodie_front_white_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button White Front">
-                                        </div>
-                                        <div class="col-4 backPicBut white">
-                                            <img src="pictures/dystopianHoodie/hoodie_back_white_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button White Back">
-                                        </div>
-                                        <div class="col-4 closePicBut white">
-                                            <img src="pictures/dystopianHoodie/closeup/closeup_white_dystopian.svg" class="pics hoodCloseUpBut" alt="Dystopian Hoodie Button White Closeup">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="container content black">
-                                    <div class="row">
-                                        <div class="col-4 frontPicBut black" >
-                                            <img src="pictures/dystopianHoodie/hoodie_front_black_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button Black Front">
-                                        </div>
-                                        <div class="col-4 backPicBut black">
-                                            <img src="pictures/dystopianHoodie/hoodie_back_black_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button Black Back">
-                                        </div>
-                                        <div class="col-4 closePicBut black">
-                                            <img src="pictures/dystopianHoodie/closeup/closeup_black_dystopian.svg" class="pics hoodCloseUpBut" alt="Dystopian Hoodie Button Black Closeup">
+                                    <!-- Buttons to switch from front, back and closeup-->
+                                    <div class="container content white">
+                                        <div class="row">
+                                            <div class="col-4 frontPicBut white" >
+                                                <img src="pictures/dystopianHoodie/hoodie_front_white_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button White Front">
+                                            </div>
+                                            <div class="col-4 backPicBut white">
+                                                <img src="pictures/dystopianHoodie/hoodie_back_white_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button White Back">
+                                            </div>
+                                            <div class="col-4 closePicBut white">
+                                                <img src="pictures/dystopianHoodie/closeup/closeup_white_dystopian.svg" class="pics hoodCloseUpBut" alt="Dystopian Hoodie Button White Closeup">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="container content creme">
-                                    <div class="row">
-                                        <div class="col-4 frontPicBut creme" >
-                                            <img src="pictures/dystopianHoodie/hoodie_front_creme_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button Creme Front">
-                                        </div>
-                                        <div class="col-4 backPicBut creme">
-                                            <img src="pictures/dystopianHoodie/hoodie_back_creme_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button Creme Back">
-                                        </div>
-                                        <div class="col-4 closePicBut creme">
-                                            <img src="pictures/dystopianHoodie/closeup/closeup_creme_dystopian.svg" class="pics hoodCloseUpBut" alt="Dystopian Hoodie Button Creme Closeup">
+                                    <div class="container content black">
+                                        <div class="row">
+                                            <div class="col-4 frontPicBut black" >
+                                                <img src="pictures/dystopianHoodie/hoodie_front_black_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button Black Front">
+                                            </div>
+                                            <div class="col-4 backPicBut black">
+                                                <img src="pictures/dystopianHoodie/hoodie_back_black_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button Black Back">
+                                            </div>
+                                            <div class="col-4 closePicBut black">
+                                                <img src="pictures/dystopianHoodie/closeup/closeup_black_dystopian.svg" class="pics hoodCloseUpBut" alt="Dystopian Hoodie Button Black Closeup">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Radio Buttons -->
-                                <div class="points">
-                                    <label class="control control-radio whiteRad">
-                                            <input type="radio" name="radio" />
-                                        <div class="control_indicator control_indicator_white"></div>
-                                    </label>
-                                    <label class="control control-radio blackRad">
-                                            <input type="radio" name="radio" />
-                                        <div class="control_indicator control_indicator_black"></div>
-                                    </label>
-                                    <label class="control control-radio cremeRad">
-                                            <input type="radio" name="radio" />
-                                        <div class="control_indicator control_indicator_creme"></div>
-                                    </label>
+                                    <div class="container content creme">
+                                        <div class="row">
+                                            <div class="col-4 frontPicBut creme" >
+                                                <img src="pictures/dystopianHoodie/hoodie_front_creme_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button Creme Front">
+                                            </div>
+                                            <div class="col-4 backPicBut creme">
+                                                <img src="pictures/dystopianHoodie/hoodie_back_creme_dystopian_preview.svg" class="pics" alt="Dystopian Hoodie Button Creme Back">
+                                            </div>
+                                            <div class="col-4 closePicBut creme">
+                                                <img src="pictures/dystopianHoodie/closeup/closeup_creme_dystopian.svg" class="pics hoodCloseUpBut" alt="Dystopian Hoodie Button Creme Closeup">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Radio Buttons -->
+                                    <div class="points">
+                                        <label class="control control-radio whiteRad">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_white"></div>
+                                        </label>
+                                        <label class="control control-radio blackRad">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_black"></div>
+                                        </label>
+                                        <label class="control control-radio cremeRad">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_creme"></div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -395,7 +495,27 @@
                             </div>
 
                             <!-- Right side, text and detailed information-->
-                            <div class="productDesc col-8">
+                            <div class="productDesc col-12 col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-8">
+                                <div class="mobileFunkt radPointsM">
+                                    <div class="pointsM">
+                                        <label class="control control-radio whiteRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_white"></div>
+                                        </label>
+                                        
+                                        <!-- Black Radio Button -->
+                                        <label class="control control-radio blackRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_black"></div>
+                                        </label>
+
+                                        <!-- Creme Radio Button -->
+                                        <label class="control control-radio cremeRadM">
+                                                <input type="radio" name="radio" />
+                                            <div class="control_indicator control_indicator_creme"></div>
+                                        </label>
+                                    </div>
+                                </div>
                                 <h1> Dystopian Hoodie </h1>
                                 <p>
                                 This piece channels the collection’s dystopian theme, 
@@ -418,5 +538,19 @@
             <article class="arrow mobileFunkt"><p class="rightArrowM arrowP mobileFunkt">&gt;</p></article>
         </section>
     </div>
+    <script>
+        const navToggle = document.querySelector('#navToggle');
+        const nav = document.querySelector('#menue');
+        const navIcon = document.querySelectorAll('.navIcon');
+        const mainP = document.querySelector('#mainP');
+
+        navToggle.addEventListener("click", () => {
+            nav.classList.toggle('open');
+            navIcon.forEach(icon => {
+                icon.classList.toggle('hidden')
+            });
+            mainP.classList.toggle('rutsch');
+        })
+    </script>
 </body>
 </html>

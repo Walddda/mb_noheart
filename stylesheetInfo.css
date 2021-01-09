@@ -11,7 +11,8 @@
 }
 
 .logoMain > object{
-    width:105%;
+    height:23.4vw;
+    margin-top: 17vh;
 }
 
 .logoMain{
@@ -21,15 +22,16 @@
 }
 
 
-.container{
+section.container{
     max-width: 100%;
-    padding-left: 0;
+    padding-left: 15px;
 }
+
 
 .contact{
     font-size: 20px;
-    margin-left:1.5vh;
     width:100%;
+    padding-bottom: 20px;
 }
 #tel, #mail, #insta{
     width: 30px;
@@ -79,11 +81,12 @@
 }
 
 #pic{
-  margin-top:7vh;
+  margin-top:3vh;
 }
 
 .topPart{
-    height: 50vh;
+    /*height: 50vh;*/
+    height: max-content;
     margin: 0;
 }
 
@@ -93,7 +96,7 @@ i{
 
 .contacts{
     margin-left: 1vh;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
     height:32px;
     vertical-align:bottom;
@@ -117,15 +120,19 @@ i{
     font-style: normal;
 }
 
-.row {
-    margin: 0;
-}
+
 
 .text {
-    height: 80%;
+    /*height: 80%;*/
+}
+.contactsBrM{
+    display: none;
+    height:0;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+
+    
     #pic{
         display:none;
     }
@@ -138,6 +145,81 @@ i{
         padding-top: 15vh;
         padding-left: 15%;
         padding-right: 15%;
+        transition: 250ms margin-top ease-in-out;
+    }
+    .txt{
+        margin-top: 3vh;
+        margin-bottom: 0vh;
+        width:100%;
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center;
+
+    }
+
+    .infoLine{
+        display: none;
+    }
+
+    .titleM{
+        display:block;
+        color:#16019A;
+        font-family:all-round-gothic, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 28px;
+        
+    }
+    
+    .socials{
+        text-align: center;
+        padding-left: 0%;
+    }
+
+    .topPart{
+        padding-bottom: 0vh;
+        /*height: 40vh;*/
+    }
+
+    .contacts{
+        font-size: 17px;
+        margin-left: 0%;
+        text-align: center;
+    }
+
+    .noheart{
+        color:#16019A;
+        font-family:all-round-gothic, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    .rutsch {
+        margin-top: 13vh;
+    }
+    .contactsBrM{
+        display: block;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    #pic{
+        display:none;
+    }
+
+    
+    .mainP{
+        font-family: brevia, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        width: auto;
+        font-size: 30px;
+        padding-top: 15vh;
+        padding-left: 15%;
+        padding-right: 15%;
+        transition: 250ms margin-top ease-in-out;
     }
     .txt{
         margin-top: 4vh;
@@ -165,8 +247,8 @@ i{
     }
 
     .topPart{
-        height: 40vh;
-        padding-bottom: 10vh;
+        /*height: 40vh;*/
+        padding-bottom: 1vh;
     }
 
     .contacts{
@@ -181,9 +263,19 @@ i{
         font-weight: 700;
         font-style: normal;
     }
+    .rutsch {
+        margin-top: 13vh;
+    }
+    .contactsBrM{
+        display: block;
+    }
+
+    .topPart {
+        /*height: 40vh;*/
+    }
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (max-width: 992px) {
     .mainP{
         font-family: brevia, sans-serif;
         font-weight: 600;
@@ -192,6 +284,7 @@ i{
         font-size: 30px;
         padding-top: 15vh;
     }
+
     .txt{
         padding-left: 10%;
         margin-top: 17vh;
@@ -208,9 +301,17 @@ i{
         font-weight: 700;
         font-style: normal;
     }
+
+    .topPart {
+        /*height: 50vh;*/
+    }
+    
+    .logoMain > object{
+        height:200px;
+    }
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px){
     .mainP{
         font-family: brevia, sans-serif;
         font-weight: 600;
@@ -219,6 +320,7 @@ i{
         padding-top: 15vh;
         font-size: 30px;
     }
+
     .txt{
         padding-left: 10%;
         margin-top: 17vh;
@@ -245,12 +347,13 @@ i{
         padding-top: 13vh;
         font-size: 30px;
     }
+
     .txt{
         padding-left: 10%;
         margin-top: 17vh;
         margin-bottom: 5vh;
         width:100%;
-        font-size: 29px;
+        font-size: 25px;
         font-weight: 500;
 
     }
@@ -261,4 +364,5 @@ i{
         font-weight: 700;
         font-style: normal;
     }
+
 }

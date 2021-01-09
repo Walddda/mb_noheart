@@ -10,9 +10,13 @@ h1{
 */
 }
 .content {
-    padding-top: 27vh;
+    padding-top: 31vh;
     width:90%;
     max-width:90%;
+}
+
+.mainP {
+    transition: 250ms margin-top ease-in-out;
 }
 
 button{
@@ -24,7 +28,6 @@ button{
     color:rgb(33, 37, 41);
     border: none;
     background-color: #f7f7f7;
-    padding: 30px;
 }
 
 button:hover{
@@ -36,7 +39,7 @@ button:hover{
 .shirtPic{
     /*width:400px;*/
     width: 20vw;
-    height: 30vw;
+    height: 25vw;
 }
 
 .pics{
@@ -48,7 +51,7 @@ button:hover{
     height: 30vw;
 }
 
-object {
+button > object {
     margin-bottom: -2vw;
 }
 
@@ -63,7 +66,7 @@ object {
 }
 
 .headerRowM {
-    width: 100vw;
+    /*width: 100vw;*/
 }
 
 
@@ -77,7 +80,7 @@ object {
     -webkit-transition: 0.2s ease-in-out;
     -ms-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
-} 
+}
 
 .product1:hover, .product2:hover, .product3:hover{
     transform: scale(1.05);
@@ -104,14 +107,13 @@ object {
     animation: fadein 0.75s ease-out 1s 1 normal backwards;
     -moz-animation: fadein 0.75s ease-out 1s 1 normal backwards; /* Firefox */
     -webkit-animation: fadein 0.75s ease-out 1s 1 normal backwards; /* Safari and Chrome */
-    -o-animation: fadein 0.75s ease-out 1s 1 normal backwards; /* Opera */     
+    -o-animation: fadein 0.75s ease-out 1s 1 normal backwards; /* Opera */
 }
 
-/* ---- ANIMATIONEN ENDE ---- */
 
 object {
     pointer-events: none;
-    height:400px;
+    /*height:400px;*/
 }
 
 @keyframes fadein {
@@ -161,9 +163,12 @@ object {
         transform: translateY(0em);
     }
 }
+/* ---- ANIMATIONEN ENDE ---- */
+@media only screen and (min-width: 0px) and (max-width: 769px) {
+    .rutsch {
+        margin-top: 10vh;
+      }
 
-
-@media only screen and (max-width: 767px) {
     .shirtPic {
         width: 50vw;
         height: 60vw;
@@ -178,17 +183,85 @@ object {
         padding: 31vw 0 16vw 0;
     }
 
+    button > h1 { 
+        font-size: 20px;
+    }
+
+    .row {
+        /*margin-left: 0;
+        margin-right: 0;*/
+    }
+
+    button {
+      padding: 0;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width: 992px) {
+    /*.shirtPic {
+        width: 50vw;
+        height: 60vw;
+    }
+
+    .hoodiePic {
+        width: 50vw;
+        width: 60vw;
+    }
+
+    .content {
+        padding: 31vw 0 16vw 0;
+    }
+
     button > h1 {
-        font-size: 35px;
+        font-size: 20px;
     }
 
     .row {
         margin-left: 0;
-    }
-}    
+    }*/
 
-@media only screen and (max-width: 1320px) {
+    .shirtPic {
+        width: 25vw;
+        height: 35vw;
+    }
+
+    .hoodiePic {
+        width: 25vw;
+        width: 35vw;
+    }
+
+    button {
+      padding: 0;
+    }
+
     button > h1 {
-        font-size: 24px;
+      font-size: 23px;
+    }
+
+}
+
+@media only screen and (min-width:992px) and (max-width: 1200px) {
+    .shirtPic {
+        width: 25vw;
+        height: 35vw;
+    }
+
+    .hoodiePic {
+        width: 25vw;
+        width: 35vw;
+    }
+
+    button {
+      padding: 0;
+    }
+
+    button > h1 {
+      font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    button > h1 {
+        font-size: 28px;
     }
 }

@@ -1,7 +1,6 @@
 body{
     padding-top: 1px;
     margin-top: -1px;
-    /*overflow: hidden;*/
 }
 
 
@@ -17,7 +16,7 @@ body{
     font-weight:500;
     font-size:27px;
     font-family: brevia,sans-serif;
-    margin-top:44vh;
+    margin: 45vh auto 0 auto;
     z-index:-1;
 }
 
@@ -33,9 +32,9 @@ body{
     font-family: flood-std, sans-serif;
     color:#16019A;
     position: fixed;
-    margin-top:35vh;
+    margin: 32vh auto 0 auto;
     font-size:80px;
-    width:30%;
+    width: 50%;
     text-align: center;
 }
 
@@ -49,7 +48,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 87.6vh;
-    padding-right: 20px;
+    padding-right: 2px;
 }
 
 .container{
@@ -59,37 +58,75 @@ body{
 #indicator {
   display: none;
 }
-
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 0px) and (max-width: 400px) {
   .shirtPicture{
-    width: 300px;
+    width: 325px;
     margin-left: 2vh;
     position: static;
   }
 
   .mainLeftShirt{
-    margin-top:2vh;
+    margin-top:5vh;
     height:35vh;
+    padding-left: 0;
+    padding-right: 15px;
   }
 
-  .desc{
+  #heading{
+    position: relative;
+    margin-top: 3vh;
+    font-size: 45px;
+    width:100%;
+  }
+
+  #desc{
+    margin-top: 1vh;
+    width:80%;
+    text-align: center;
+    margin-left:10%;
+    font-size: 20px;
+  }
+
+  .rutsch {
+    margin-top: calc(12.4vh + 150px);
+  }  
+}
+
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+  .shirtPicture{
+    width: 350px;
+    margin-left: 2vh;
+    position: static;
+  }
+
+  .mainLeftShirt{
+    margin-top:7vh;
+    height:35vh;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #desc{
     margin-top: 2vh;
+    width:80%;
+    text-align: center;
+    margin-left:10%;
+    font-size: 25px;
   }
 
   #heading{
     position: relative;
     margin-top: 5vh;
-    font-size: 45px;
-    width:80%;
+    font-size: 55px;
+    width:100%;
   }
 
   .rutsch {
     margin-top: 24.4vh;
-  }
-  
+  }  
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (max-width: 992px) {
   
   figure {
     margin-bottom: 0;
@@ -102,12 +139,14 @@ body{
 
   .shirtPicture{
     width: 450px;
-    margin-left: 1vh;
+    margin-left: 4vh;
+    margin-top: 17vh;
   }
 
   #desc {
-    margin: 0 auto;
+    margin: 1vh auto 0 auto;
     font-size: 25px;
+    text-align: center;
   }
 
   .mainP{
@@ -116,29 +155,39 @@ body{
   }
 
   #heading{
-    position: static;
-    display: inline;
+    position: relative;
     font-size: 55px;
+    margin-top: 50vh;
+    width:100%;
   }
 }
 
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
   #heading{
     width: 50%;
     font-size: 65px;
-    margin: 30vh auto 0 auto;
+    margin: 33vh auto 0 auto;
   }
   
   #desc {
     text-align: center;
-    margin: 2vh auto 0 auto;
-    
+    margin: 43vh auto 0 auto;
+    font-size: 25px;  
+  }
+
+  body{
+    overflow:hidden;
   }
 }
 
 
 @media only screen and (min-width: 1200px){
   /* ANIMATIONEN */
+
+  body{
+    overflow: hidden;
+  }
   #indicator {
     display: block;
   }
@@ -147,8 +196,7 @@ body{
   }
 
   #indicator {
-   margin-top: 81vh;
-   margin-left: 28%;
+   margin: 81vh auto 0 auto;
 
    animation: jump 0.75s ease-out 0s infinite;
    -moz-animation: jump 0.75s ease-out 0s infinite;

@@ -8,7 +8,6 @@ body{
     color:rgb(33, 37, 41);
     border: none;
 }
-
 h1, h3{
   color: #16019A;
   font-weight: bold;
@@ -23,12 +22,11 @@ h1, h3{
     background-repeat: repeat;
     background-size: 100%;
     background-attachment: fixed;*/
+    transition: 250ms margin-top ease-in-out;
 }
-
 .detP{
   margin-top: 5vh;
 }
-
 .heart{
     width:25px;
 }
@@ -39,9 +37,7 @@ h1, h3{
     display: flex;
     flex-direction: row;
     height: 45%;
-}
-.productImage{
-    /*width: 100%;*/
+    margin-bottom: 10vh;
 }
 .product{
     display: flex;
@@ -56,11 +52,9 @@ h1, h3{
     flex-direction: row;
     background-color: white;
 }
-
 .prodBoxRow{
     height: 100%;
 }
-
 .productDesc{
     margin-bottom: 0vh;
 }
@@ -113,7 +107,6 @@ h1, h3{
     background-color: #F6EFD2;
     background: #F6EFD2;
 }
-
 .content{
     margin-top: 5vh;
     padding-left: 10%;
@@ -125,27 +118,17 @@ h1, h3{
 .row > .white > .pics{
     background-color: #e6e6e6 ;
 }
-
 .pics{
     border: black solid 1px;
     border-radius: 8px;
     padding: 5% 10% 5% 10%;
 }
-.hoodCloseUpBut{
-    /*padding: 18% 10% 18% 10%;*/
-}
-
-.hoodPics{
-    /*height: 50%;*/
-}
-
 .backPic, .closePic{
     display:none;
 }
 .closePic{
     margin-bottom: 1px;
 }
-
 .control {
     font-family: arial;
     display: block;
@@ -156,7 +139,6 @@ h1, h3{
     cursor: pointer;
     font-size: 16px;
 }
-
 .control input {
     position: absolute;
     z-index: -1;
@@ -170,23 +152,19 @@ h1, h3{
     width: 20px;
     border-radius: 80%;
 }
-
 .control_indicator_white {
     background-color: white;
     border: 2px solid #000000;
 
 }
-
 .control_indicator_black {
     background-color: black;
     /* BORDER FEHLT */
 }
-
 .control_indicator_creme {
     background-color: #f6efd2;
     border: 2px solid #000000;
 }
-
 .control input:checked ~ .control_indicator:after {
     display: block;
 }
@@ -210,230 +188,95 @@ h1, h3{
     display:none;
     padding: 0;
 }
+.productImageM{
+    width: 60vw;
+}
+.pointsM{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 37%;
+    margin-right:37%;
+    /*margin-top: 2vh;*/
+}
+.whiteRadM{
+    background-color: white;
+    background: white;
+    border: white;
+}
+.blackRadM{
+    background-color: black;
+    background: black;
+}
+.cremeRadM{
+    background-color: #F6EFD2;
+    background: #F6EFD2;
+}   
+.picturesM > img{
+    margin: 10px 0 10px 0;
+}
+.picturesM > .backPicM{
+    margin: 30px 0;
+}
+.imageBoxM{
+    text-align: center;
+    /*margin-bottom: 52vh;*/
+    position: fixed;
+    height: 33vh;
+    z-index: 0;
+    overflow:auto;
+    top: 12vh;
+}
+.radPointsM{
+    height: 30px;
+}
 /*--------------------------mobile--------------------------*/
 @media only screen and (max-width: 800px) {
     body{
-        padding-top: 1px;
-        margin-top: -1px;
-        font-family: brevia,sans-serif;
-        font-weight: 500;
         font-size: 16px;
-        text-decoration:none;
-        color:rgb(33, 37, 41);
-        border: none;
     }
     .mobileFunkt{
         display: block;
     }
-    h1, h3{
-      color: #16019A;
-      font-weight: bold;
-      font-style: italic;
-    }
     .mainP{
-        width: 100%;
-        /*height: 130vh;*/
         margin-top: 12vh;
-        /*padding-top: 46.5px;*/
-        /*padding-top: 10vh;
-        background-image:url('pictures/BG.png') ;
-        background-repeat: repeat;
-        background-size: 100%;
-        background-attachment: fixed;*/
-    }
-    
-    .detP{
-      margin-top: 5vh;
-    }
-    
+    }    
     .heart{
-        width:25px;
-    }
-    .container{
-        max-width: 100%;
+        width:17px;
     }
     .topBoxnarrows{
-        flex-direction: row;
-        height: 45%;
-        position: fixed;
-        top: 20vh;
-    }
-    .productImageM{
-        width: 60vw;
-    }
-    .product{
-        display: flex;
-        flex-direction: row;
-        background-color: white;
+        margin-top: 15vh;
+        height: max-content;
+        padding-bottom: 20px;
+        margin-bottom: 0;
     }
     .productBox{
-        border: 1px black solid;
-        padding: 5%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        background-color: white;
-        margin-top: 30vh;
-    }
-    
-    .prodBoxRow{
-        height: 100%;
-    }
-    
+        border: none;
+        padding: 0;
+        margin: 30vh -1% 0 -1%;
+    }    
     .productDesc{
-        margin-bottom: 0vh;
-        background-color: rgba(255, 255, 255, 0.616);
-        border: black 2px solid;
+        background-color: white;
+        padding: 5% 5% 5% 5%;
+        border: 1px black solid;
     }
     .arrow{
-        display: flex;
-        font-size: 50px;
-        align-items: center;
         padding:8px;
         height: 50vh;
+        z-index: 1;
     }
     .arrowP{
-        cursor: pointer;
-        margin-bottom: 30vh;
-    }
-    .line{
-        font-size: 0px;
-        width: 2px;
-        height: 100%;
-        background-color: #70707055;
-    }
-    .points{
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        margin-left: 37%;
-        margin-right:37%;
-        margin-top: 2vh;
-    }
-    .leftBlock{
-        display: flex;
-        flex-direction: column;
-        /*height: 80vh;*/
-        justify-content: center;
+        /*margin-bottom: 30vh;*/
+        margin-top: 10vw;
     }
     .lineDiv{
         display: none;
-    }
-    .whiteRad{
-        background-color: white;
-        background: white;
-        border: white;
-    }
-    .blackRad{
-        background-color: black;
-        background: black;
-    }
-    .cremeRad{
-        background-color: #F6EFD2;
-        background: #F6EFD2;
-    }
-    
-    .content{
-        margin-top: 5vh;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    .frontPicBut, .backPicBut, .closePicBut{
-        width: 200px;
-    }
-    .row > .white > .pics{
-        background-color: #e6e6e6 ;
-    }
-    
-    .pics{
-        border: black solid 1px;
-        border-radius: 8px;
-        padding: 5% 10% 5% 10%;
-    }
-    .hoodCloseUpBut{
-        /*padding: 18% 10% 18% 10%;*/
-    }
-    
-    .hoodPics{
-        /*height: 50%;*/
-    }
-    
-    .closePic{
-        margin-bottom: 1px;
-    }
-    
-    .control {
-        font-family: arial;
-        display: block;
-        position: relative;
-        padding-left: 29px;
-        margin-bottom: 5px;
-        padding-top: 0px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    
-    .control input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
-    .control_indicator {
-        position: absolute;
-        top: 2px;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        border-radius: 80%;
-    }
-    
-    .control_indicator_white {
-        background-color: white;
-        border: 2px solid #000000;
-    
-    }
-    
-    .control_indicator_black {
-        background-color: black;
-        /* BORDER FEHLT */
-    }
-    
-    .control_indicator_creme {
-        background-color: #f6efd2;
-        border: 2px solid #000000;
-    }
-    
-    .control input:checked ~ .control_indicator:after {
-        display: block;
-    }
-    .control-radio .control_indicator {
-        border-radius: 80%;
-    }
-    
-    .control-radio .control_indicator:after {
-        left: 0px;
-        top: 0px;
-        height: 0px;
-        width: 0px;
-        border-radius: 80%;
-        background: #ad0000;
-        transition: background 250ms;
-    }
-    .control-radio input:disabled ~ .control_indicator:after {
-        background: #000000;
-    }
+    } 
     .desktopFunkt{
         display:none;
         padding: 0;
-    }
-    .picturesM > img{
-        margin: 20px 0;
-    }
-    .imageBoxM{
-        text-align: center;
-        margin-bottom: 52vh;
     }
     .productDesc > h1{
         font-size: 20px;
@@ -444,12 +287,162 @@ h1, h3{
     .productDesc > p{
         font-size: 16px;
     }
+    .rutsch {   
+        margin-top: 27vh;
+    }
+    .imageProductM{
+        padding-top: 2vh;
+    }
 }
   
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (max-width: 992px)  {
+    body{
+        font-size: 16px;
+    }
+    .mobileFunkt{
+        display: block;
+    }
+    .mainP{
+        margin-top: 12vh;
+    }    
+    .heart{
+        width:17px;
+    }
+    .topBoxnarrows{
+        margin-top: 15vh;
+        height: max-content;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
+    .productBox{
+        border: none;
+        padding: 0;
+        margin: 35vh 10% 0 10%;
+        width: 100%;
+    }    
+    .productDesc{
+        background-color: white;
+        padding: 5% 5% 5% 5%;
+        border: 1px black solid;
+    }
+    .arrow{
+        padding:8px;
+        height: 50vh;
+        z-index: 1;
+        font-size: 70px;
+    }
+    .arrowP{
+        /*margin-bottom: 30vh;*/
+        margin-top: 10vw;
+    }
+    .lineDiv{
+        display: none;
+    } 
+    .desktopFunkt{
+        display:none;
+        padding: 0;
+    }
+    .productDesc > h1{
+        font-size: 20px;
+    }
+    .productDesc > h3{
+        font-size: 18px;
+    }
+    .productDesc > p{
+        font-size: 16px;
+    }
+    .productImageM{
+        width: 40vw;
+    }
+    .picturesM{
+        width: 50%;
+    }
+    .imageProductM{
+        display: flex;
+        justify-content: center;
+        padding-top: 2vh;
+    }
+    .product{
+        width: 100%;
+    }
+    .imageBoxM{
+        height: 38vh;
+    }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    body{
+        font-size: 24px;
+    }
+    .mobileFunkt{
+        display: block;
+    }
+    .mainP{
+        margin-top: 12vh;
+    }    
+    .heart{
+        width:17px;
+    }
+    .topBoxnarrows{
+        margin-top: 15vh;
+        height: max-content;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
+    .productBox{
+        border: none;
+        padding: 0;
+        margin: 40vh 10% 0 10%;
+        width: 100%;
+    }    
+    .productDesc{
+        background-color: white;
+        padding: 5% 5% 5% 5%;
+        border: 1px black solid;
+    }
+    .arrow{
+        padding:8px;
+        height: 50vh;
+        z-index: 1;
+        font-size: 90px;
+    }
+    .arrowP{
+        margin-top: 10vw;
+    }
+    .lineDiv{
+        display: none;
+    } 
+    .desktopFunkt{
+        display:none;
+        padding: 0;
+    }
+    .productDesc > h1{
+        font-size: 28px;
+    }
+    .productDesc > h3{
+        font-size: 26px;
+    }
+    .productDesc > p{
+        font-size: 24px;
+    }
+    .productImageM{
+        width: 40vw;
+    }
+    .picturesM{
+        width: 50%;
+    }
+    .imageProductM{
+        display: flex;
+        justify-content: center;
+    }
+    .product{
+        width: 100%;
+    }
+    .imageBoxM{
+        height: 43vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
 }
 
 

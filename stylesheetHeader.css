@@ -96,7 +96,7 @@ a:hover{
 .headerBackground{
     position: fixed;
     background-color: #f7f7f7;
-    height: 12.4%;
+    height: 12.4vh;
     width: 100%;
 }
 
@@ -107,7 +107,9 @@ a:hover{
     height:12.4vh;
     z-index: 1;
 }
-
+header.container{
+    max-width: 100%;
+}
 /* ------------------------------ */
 .headerMobile{
     display: none;
@@ -163,7 +165,7 @@ a:hover{
     z-index: 1 ;
   }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 0px) and (max-width: 800px) {
     .headerDesktop {
         display: none;
     }
@@ -177,8 +179,10 @@ a:hover{
       }
     
     .logoMImg{
-        margin-left: 70px;
+        margin-left: 100px;
       }
+
+      
     
     /*-------------------------------------------------------*/
     /*Hamburger Menu*/
@@ -223,11 +227,11 @@ a:hover{
     
     li {
         list-style-type: none;
-        
         flex-direction: row;
         align-items: center;
         padding: 0.5rem 0;
     }
+
     .spaceLi{
         margin-left: 5px;
         display: inline;
@@ -242,33 +246,35 @@ a:hover{
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (max-width: 992px){
     a{
         font-family: all-round-gothic, sans-serif;
         font-weight: 700;
         font-style: normal;
-        font-size: 20px;
+        font-size: 22px;
         text-decoration:none;
         color:#16019A;
     }
     .border{
         width: 2px;
-        height:25px;
+        height:24px;
         margin-top:1%;
         background-color: rgba(0, 0, 0, 0.267);
         font-size: 0%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .navBar{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-right: 15%;
-        margin-top: 4.5vh;
+        margin-top: 5vh;
     }
 
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width:1200px) {
     a{
         font-family: all-round-gothic, sans-serif;
         font-weight: 600;
@@ -277,19 +283,25 @@ a:hover{
         text-decoration:none;
         color:#16019A;
     }
+    
     .border{
         width: 2px;
         height:25px;
-        margin-top:1%;
+        margin-top:2%;
         background-color: rgba(0, 0, 0, 0.267);
         font-size: 0%;
     }
+
     .navBar{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-right: 15%;
-        margin-top: 4.5vh;
+        margin-top: 5vh;
+    }
+
+    .linePicture{
+        padding-left:2%;
     }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */

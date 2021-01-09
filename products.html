@@ -47,62 +47,88 @@
     <!-- Header Mobile Version -->
     <header class="container headerMobile">
         <div class="row headerRowM">
-            <div class="col-3 logoM"><img src="pictures/logo/logo_FINAL.svg" class="logoMImg"></div>
+            <div class="col-3 logoM">
+                <object class="logoMImg" data="pictures/logo/logo_FINAL.svg" type="image/svg+xml" title="noheartLogo" alt="Logo"></object>
+            </div>
             <div class="col-6 spaceM"></div>
             <div class="col-3 burgerM">
-                <svg stroke="#B5B5B5" width="55" height="55" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" fill="none"><path xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+                <div id="navToggle" class="nav-toggle">
+                    <img id="navClosed" class="navIcon" src="https://s.svgbox.net/hero-solid.svg?ic=menu&fill=16019a" width="40" height="40" alt="hamburger menu">
+                    <img id="navOpen" class="navIcon hidden" src="https://s.svgbox.net/hero-solid.svg?ic=x&fill=16019a" width="40" height="40" alt="close hamburger">
+                 </div>
             </div>
         </div>
     </header>
 
+    <!-- mobile nav bar -->
+    <div id="menue" class="menue">
+        <ul>
+          <li><a href="index.html">
+          <img src="https://s.svgbox.net/materialui.svg?ic=home&fill=16019a" width="32" height="32"><p class="spaceLi linkTo">home</p>
+          </a></li>
+          <li><a href="#">
+          <img src="https://s.svgbox.net/hero-solid.svg?ic=collection&fill=ffa53f" width="32" height="32"><p class="spaceLi curSec">products</p></a></li>
+          <li><a href="info.html">
+          <img src="https://s.svgbox.net/hero-solid.svg?ic=information-circle&fill=16019a" width="32" height="32"><p class="spaceLi linkTo">info</p>
+          </a></li>
+        </ul>
+    </div>
+
     <!-- Main Content preview of the shirts-->
-    <div class="container content">
-        <div class="row">
-            <!-- Signature Shirt -->
-            <div class="col-sm-12 col-md-4 pics product1" >
-                <form action="productDetailed.php" method="post" class="piece-link">
-                    <input type="hidden" name="val" value="0">
-                    <button type="submit" value="0">
-                      <object class="shirtPic" data="pictures/signatureShirt/shirt_front_black_signature.svg" type="image/svg+xml" title="Signature Shirt" alt="Signature Shirt"></object>  
-                      <br><h1>Signature Shirt</h1>
-                    </button>                  
-                </form>
-            </div>
-
-            <!-- Dystopian Shirt -->
-            <div class="col-sm-12 col-md-4 pics product2">
-                <form action="productDetailed.php" method="post" class="piece-link">
-                    <input type="hidden" name="val" value="1">
-                    <button type="submit" value="1">
-                      <object class="shirtPic" data="pictures/dystopianShirt/shirt_back_black_dystopian.svg" type="image/svg+xml" title="Dystopian Shirt" alt="Dystopian Shirt"></object>
-                      <br><h1>Dystopian Shirt</h1>
-                    </button>
-                </form>
-            </div> 
-
-            <!-- Dystiouan Hoodie -->
-            <div class="col-sm-12 col-md-4 pics product3">
-                <form action="productDetailed.php" method="post" class="piece-link">
-                    <input type="hidden" name="val" value="2">
-                    <button type="submit" value="2">
-                      <object class="shirtPic" data="pictures/dystopianHoodie/hoodie_back_black_dystopian.svg" type="image/svg+xml" title="Dystopian Hoodie" alt="Dystopian Hoodie"></object>
-                    <br><h1>Dystopian Hoodie</h1>
-                    </button>
-                </form>
+    <div class="mainP" id="mainP">
+        <div class="container content">
+            <div class="row">
+                <!-- Signature Shirt -->
+                <div class="col-sm-12 col-md-4 pics product1" >
+                    <form action="productDetailed.php" method="post" class="piece-link">
+                        <input type="hidden" name="val" value="0">
+                        <button type="submit" value="0">
+                          <object class="shirtPic" data="pictures/signatureShirt/shirt_front_black_signature.svg" type="image/svg+xml" title="Signature Shirt" alt="Signature Shirt"></object>  
+                          <br><h1>Signature Shirt</h1>
+                        </button>                  
+                    </form>
+                </div>
+    
+                <!-- Dystopian Shirt -->
+                <div class="col-sm-12 col-md-4 pics product2">
+                    <form action="productDetailed.php" method="post" class="piece-link">
+                        <input type="hidden" name="val" value="1">
+                        <button type="submit" value="1">
+                          <object class="shirtPic" data="pictures/dystopianShirt/shirt_back_black_dystopian.svg" type="image/svg+xml" title="Dystopian Shirt" alt="Dystopian Shirt"></object>
+                          <br><h1>Dystopian Shirt</h1>
+                        </button>
+                    </form>
+                </div> 
+    
+                <!-- Dystiouan Hoodie -->
+                <div class="col-sm-12 col-md-4 pics product3">
+                    <form action="productDetailed.php" method="post" class="piece-link">
+                        <input type="hidden" name="val" value="2">
+                        <button type="submit" value="2">
+                          <object class="shirtPic" data="pictures/dystopianHoodie/hoodie_back_black_dystopian.svg" type="image/svg+xml" title="Dystopian Hoodie" alt="Dystopian Hoodie"></object>
+                        <br><h1>Dystopian Hoodie</h1>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Java Script Function -->
-    <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
-    <script>
-            var preload = new createjs.LoadQueue();
-            preload.on("fileload", handleFileComplete);
-            preload.loadFile("pictures/shirt_front_black_signature.svg")
-            preload.loadFile("pictures/shirt_back_black.svg")
-            preload.loadFile("pictures/hoodie_back_black.svg")
+    
 
-            function handleFileComplete(){};
-    </script>
+<script>
+    const navToggle = document.querySelector('#navToggle');
+    const nav = document.querySelector('#menue');
+    const navIcon = document.querySelectorAll('.navIcon');
+    const mainP = document.querySelector('#mainP');
+
+    navToggle.addEventListener("click", () => {
+        nav.classList.toggle('open');
+        navIcon.forEach(icon => {
+            icon.classList.toggle('hidden')
+        });
+        mainP.classList.toggle('rutsch');
+    })
+</script>
 </body>
 </html>
